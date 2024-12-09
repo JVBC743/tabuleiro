@@ -1,0 +1,59 @@
+/jogo/
+├── /assets/
+│   ├── /images/            # Imagens (sprites, texturas, ícones, etc.)
+│   ├── /audio/             # Sons e músicas (efeitos sonoros, música de fundo)
+│   ├── /animations/        # Arquivos de animação (json, atlas, etc.)
+│   ├── /fonts/             # Fontes (tipos de letras)
+│   ├── /models/            # Modelos 3D (arquivos de modelos)
+│   ├── /videos/            # Vídeos (cutscenes, trailers)
+│   └── /other/             # Outros recursos (ex: shaders, partículas, etc.)
+├── /src/                   # Código-fonte do jogo
+│   ├── /core/              # Funcionalidades principais (game loop, controlador)
+│   ├── /ui/                # Interface do usuário (menus, HUD, etc.)
+│   ├── /entities/          # Entidades do jogo (jogadores, inimigos, NPCs)
+│   ├── /levels/            # Códigos de níveis (geradores, mapas, etc.)
+│   ├── /utils/             # Funções utilitárias (ex: helpers, constantes, etc.)
+│   └── /main.js (ou main.py, etc.)  # Arquivo principal de execução do jogo
+├── /scenes/                # Definição de cenas do jogo (backgrounds, transições)
+├── /tests/                 # Testes automatizados (unitários, integração, etc.)
+├── /docs/                  # Documentação do jogo
+├── /build/                 # Arquivos gerados após compilação (versão final)
+│   ├── /assets/            # Arquivos estáticos preparados para produção
+│   ├── /js/                # Arquivos JS compilados (se estiver usando JavaScript)
+│   └── /other/             # Outros arquivos de build (dependências externas)
+├── /config/                # Arquivos de configuração do projeto
+│   ├── /gameconfig.json    # Arquivo de configuração do jogo (dificuldade, controles, etc.)
+│   └── /settings.json      # Configurações específicas de ambiente de desenvolvimento
+└── /README.md              # Documento com as instruções do projeto
+
+
+    /assets/: Contém todos os recursos do jogo (imagens, sons, animações, fontes, etc.).
+        /images/: Imagens usadas no jogo, como sprites, texturas e ícones.
+        /audio/: Sons e músicas que serão utilizados no jogo.
+        /animations/: Arquivos para animações, como atlases de sprites ou animações JSON.
+        /models/: Arquivos de modelos 3D.
+
+    /src/: Código-fonte do jogo.
+        /core/: Contém os arquivos principais do jogo, como o loop do jogo e as funcionalidades centrais.
+        /ui/: Contém a interface do usuário, incluindo menus, HUD (Heads-Up Display), botões, etc.
+        /entities/: Contém o código para as entidades do jogo (personagens, inimigos, NPCs, etc.).
+        /levels/: Arquivos responsáveis pelos diferentes níveis ou cenários do jogo.
+        /utils/: Funções auxiliares que são utilizadas em várias partes do jogo, como helpers ou constantes.
+
+    /scenes/: Contém definições de cenas do jogo, com a estrutura de objetos, transições entre elas, e outras informações pertinentes à navegação do jogo.
+
+    /tests/: Para testes automatizados do código. Ideal para garantir que o jogo funcione conforme esperado e para detectar falhas durante o desenvolvimento.
+
+    /docs/: Documentação sobre o jogo. Pode incluir guias para desenvolvedores, designers ou outros colaboradores, bem como a descrição do conceito do jogo, mecânicas, etc.
+
+    /build/: Pasta onde serão gerados os arquivos finais do jogo para produção. Aqui ficam os arquivos compilados e otimizados para o lançamento.
+
+    /config/: Arquivos de configuração do jogo, como configurações de gráficos, controles e outras opções ajustáveis.
+
+    README.md: Contém informações gerais sobre o projeto, como como rodá-lo, suas dependências, objetivos e outros detalhes importantes.
+
+Dicas:
+
+    Modularização: Separe o código de forma modular, com classes ou funções específicas para cada tipo de entidade, nível ou sistema (como física, IA, etc.).
+    Versionamento: Use ferramentas de versionamento como Git para acompanhar o progresso do desenvolvimento.
+    Manutenção: Organize seus assets e código de forma que seja fácil encontrar, modificar e adicionar novos recursos.

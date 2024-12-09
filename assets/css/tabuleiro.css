@@ -1,0 +1,15 @@
+#tabuleiro > div{
+    margin: 20px;
+    border-style: dashed;
+    width: 3cm;
+    height: 3cm;
+    
+}
+
+#tabuleiro{
+    
+    display: flex;
+    justify-content: center;
+    align-items: 30px;
+
+}

@@ -1,0 +1,16 @@
+.canvas-container {
+    width: 100vw; /* Ocupa toda a largura da tela */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    overflow: scroll; /* Permite rolagem caso o conteúdo ultrapasse os limites */
+    position: relative;
+    background-color: #f0f0f0; /* Cor de fundo da área de visualização */
+}
+
+canvas {
+    display: block; /* Remove margens indesejadas no canvas */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
