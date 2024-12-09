@@ -1,26 +1,82 @@
-import Question from "./src/entities/Question.js"
-import Alternative from "./src/entities/Alternative.js"
+import Question from "./src/entities/Question.js";
+import Alternative from "./src/entities/Alternative.js";
 
-const questions = [
+// Criando perguntas e alternativas
+const question = new Question(1, "Qual é a capital do Brasil?", 1);
 
-    new Question(1, "Teste 123", 1 ),
+const alternative = new Alternative(
+    1, 1, "alt1", "alt2", "alt3", "alt4",
+    "Brasília", "Rio de Janeiro", "São Paulo", "Curitiba", "Brasília"
+);
 
-    // new Question(id-questao, "enunciado", id-alternativas ),
+// Selecionando o formulário no HTML
+const form = document.querySelector("form");
 
-]
+// Criando o título da questão
+const titulo = document.createElement("h2");
 
-const alternatives = [
+titulo.textContent = question.statement; // Adiciona o enunciado da questão
+form.appendChild(titulo);
 
-    new Alternative(1, 1, "1", "2", "3", "4", "2")
+// Criando as alternativas dinamicamente
+const alternatives_id_cont = [
+    { id: alternative.id_alt1, text: alternative.cont1, correct: alternative.correct},
+    { id: alternative.id_alt2, text: alternative.cont2, correct: alternative.correct },
+    { id: alternative.id_alt3, text: alternative.cont3, correct: alternative.correct },
+    { id: alternative.id_alt4, text: alternative.cont4, correct: alternative.correct },
+];
 
-    // new Alternative(id-alternativas, id-questao, "alt1", "alt2", "alt3", "alt4", "correto")
+alternatives_id_cont.forEach((alt) => {
 
-]
+    // Cria o input do tipo radio
+    const radio = document.createElement("input");
+    radio.type = "radio";
+    radio.id = alt.id;
+    radio.name = `question${question.id}`;
+    radio.value = alt.text;
 
-const quest_alt = {
+    // Cria a label associada ao input
+    const label = document.createElement("label");
+    label.htmlFor = alt.id;
+    label.textContent = alt.text;
 
-    [questions[0].id]: alternatives[0],
+    // Adiciona o radio e a label ao formulário
+    form.appendChild(radio);
+    form.appendChild(label);
 
-}
+    // Adiciona uma quebra de linha para separar as alternativas
+    form.appendChild(document.createElement("br"));
 
-window.alert(`Alternativa correta: ${quest_alt[questions[0].id].correct}`);
+});
+
+//Fazer a respota com alternativas funcionar
+
+const button = document.createElement("button")
+
+form.appendChild(document.createElement("br"));
+
+button.textContent = "Enviar"
+button.htmlFor = question.id
+
+form.appendChild(button)
+
+button.addEventListener("click", (event) => {
+
+    event.preventDefault()
+
+    const caixinha_marcada = document.querySelector(`input[name="question${question.id}"]:checked`)
+
+    if(caixinha_marcada){
+
+        const resposta_marcada = caixinha_marcada.value
+        const resposta_correta = alternative.correct
+        if(resposta_marcada === resposta_correta){
+
+            alert("Acertou!")
+        }else{
+
+            alert("Errou!")
+        }
+    }
+
+});
