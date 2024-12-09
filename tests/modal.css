@@ -1,0 +1,31 @@
+#modal_quadrado{
+
+    width: 300px;
+    height: 300px;
+    border: 5px solid black;
+
+    margin:10px;
+
+    position: relative;
+    
+    /*background-color: black;*/
+
+}
+
+#janela #texto{
+
+    position: absolute;
+    top: 50%;
+
+    
+    
+}
+
+
+
+#fechar{
+
+    display: flex;
+    justify-content: right;
+    margin: 10px;
+}

@@ -1,5 +1,5 @@
-import Question from "./src/entities/Question.js";
-import Alternative from "./src/entities/Alternative.js";
+import Question from "../src/entities/Question.js";
+import Alternative from "../src/entities/Alternative.js";
 
 // Criando perguntas e alternativas
 const question = new Question(1, "Qual é a capital do Brasil?", 1);

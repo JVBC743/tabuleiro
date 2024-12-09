@@ -74,42 +74,6 @@ const tabuleiro = [
     //alternativa -> questão -> posição 
 ];
 
-const questions = [
-
-    new Question(1, "Teste 123", 1 ),
-
-    // new Question(id-questao, "enunciado", id-alternativas ),
-
-]
-
-const alternatives = [
-
-    new Alternative(1, 1, 1, 2, 3, 4, "Cont 1", "Cont 2", "Cont 3", "Cont 4", id-alt-correto)
-
-
-    // new Alternative(id-alternativas, id-questao, id1, id2, id3, id4, "Cont 1", "Cont 2", "Cont 3", "Cont 4", id-alt-correto)
-
-
-
-    
-]
-
-const quest_alt = {
-
-    [questions[0].id]: alternatives[0],
-
-}
-
-
-
-
-
-let arrayAssociativo = {
-    "nome": new Square(0,0,0,0, 'black', 'white', 0),
-    "idade": 30,
-    "cidade": "São Paulo"
-};
-// arrayAssociative.nome;
 
 
 
