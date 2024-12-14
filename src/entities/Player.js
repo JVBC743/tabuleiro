@@ -32,6 +32,7 @@ class Player {
             this.moveToNextSquare(tabuleiro);
         }
     }
+
     // Método para centralizar o jogador em um square
     moveToSquare(square) {
         // Calcula a posição central do square
@@ -68,6 +69,11 @@ class Player {
                 this.y = targetY;
                 this.currentPosition += this.direction;
 
+                // Não exibe o modal até o movimento estar concluído
+                if (this.currentPosition === this.targetPosition) {
+                    this.showModal(); // Exibe a modal apenas quando o movimento for concluído
+                }
+
                 // Continua a animação se não alcançou o objetivo final
                 if (this.currentPosition !== this.targetPosition) {
                     requestAnimationFrame(() => this.moveToNextSquare(tabuleiro)); // Próxima animação
@@ -94,7 +100,42 @@ class Player {
             this.moveToNextSquare(tabuleiro);
         }
     }
-}
 
+    // Método para exibir a tela modal com o botão "Fechar"
+    showModal() {
+        // Cria o modal
+        const modal = document.createElement('div');
+        modal.style.position = 'fixed';
+        modal.style.top = '0';
+        modal.style.left = '0';
+        modal.style.width = '100vw';
+        modal.style.height = '100vh';
+        modal.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+        modal.style.display = 'flex';
+        modal.style.justifyContent = 'center';
+        modal.style.alignItems = 'center';
+        modal.style.zIndex = '1000';
+        modal.id = 'modal';
+
+        // Cria o botão de fechar
+        const closeButton = document.createElement('button');
+        closeButton.textContent = 'Fechar';
+        closeButton.style.padding = '10px 20px';
+        closeButton.style.fontSize = '16px';
+        closeButton.style.cursor = 'pointer';
+        closeButton.addEventListener('click', () => this.closeModal(modal));
+
+        // Adiciona o botão ao modal
+        modal.appendChild(closeButton);
+
+        // Adiciona o modal ao corpo do documento
+        document.body.appendChild(modal);
+    }
+
+    // Método para fechar o modal
+    closeModal(modal) {
+        document.body.removeChild(modal); // Remove o modal
+    }
+}
 
 export default Player;
