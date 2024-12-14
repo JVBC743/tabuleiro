@@ -1,18 +1,9 @@
-class Question{
-
-    constructor(id, statement, id_alternatives) {
-
-        this.id = id
-        this.statement = statement
-        this.id_alternatives = id_alternatives
-    }
-
+class Question {
     
-
-    mix(){
-
-
+    constructor(id, enunciado, alternativasIds) {
+        this.id = id;
+        this.enunciado = enunciado;
+        this.alternativasIds = alternativasIds; // IDs das alternativas
     }
 }
-
 export default Question;

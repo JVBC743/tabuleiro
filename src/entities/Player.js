@@ -1,3 +1,6 @@
+import Question from "./Question.js";
+import Alternative from "./Alternative.js";
+
 class Player {
     constructor(x, y, width, height, color) {
         this.x = x;
@@ -11,6 +14,25 @@ class Player {
         this.moveSpeed = 0.09; // Velocidade do movimento (quanto menor, mais lento)
         this.direction = 1; // Direção do movimento (1 para frente, -1 para trás)
         this.animationFrameId = null; // Para armazenar o id da animação
+        this.selectedAnswer = null; // Variável para armazenar a resposta selecionada
+
+        // Questões e alternativas mapeadas
+        this.questoes = [
+            new Question(1, "Qual é a capital do Brasil?", [1, 2, 3, 4]),
+            new Question(2, "Qual é a maior montanha do mundo?", [1, 2, 3, 4])
+        ];
+
+        this.alternativas = [
+            new Alternative(1, 1, ["Belo Horizonte", "São Paulo", "Brasília", "Cuiabá"], "Brasília"),
+            new Alternative(2, 2, ["Everest", "Kilimanjaro", "Aconcágua", "Mont Blanc"], "Everest")
+        ];
+
+        // Mapeamento de questões por casa
+        this.questoesPorCasa = [
+            { casa: 0, pergunta: this.questoes[0], alternativas: this.alternativas.slice(0, 1) },  // Alternativa 1
+            { casa: 1, pergunta: this.questoes[1], alternativas: this.alternativas.slice(1, 2) }   // Alternativa 2
+        ];
+        
     }
 
     draw(ctx) {
@@ -49,6 +71,12 @@ class Player {
         if (this.isMoving && this.currentPosition !== this.targetPosition) {
             const currentSquare = tabuleiro[this.currentPosition];
             const targetSquare = tabuleiro[this.currentPosition + this.direction];
+
+            // Verifica se targetSquare existe (para evitar erro de índice fora do limite)
+            if (!targetSquare) {
+                this.isMoving = false;
+                return;
+            }
 
             // Calcula a posição intermediária para a animação
             const targetX = targetSquare.x + (targetSquare.width - this.width) / 2;
@@ -101,7 +129,7 @@ class Player {
         }
     }
 
-    // Método para exibir a tela modal com o botão "Fechar"
+    // Método para exibir a tela modal com as perguntas e alternativas
     showModal() {
         // Cria o modal
         const modal = document.createElement('div');
@@ -112,10 +140,35 @@ class Player {
         modal.style.height = '100vh';
         modal.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
         modal.style.display = 'flex';
+        modal.style.flexDirection = 'column';
         modal.style.justifyContent = 'center';
         modal.style.alignItems = 'center';
         modal.style.zIndex = '1000';
         modal.id = 'modal';
+
+        const casaAtual = this.questoesPorCasa.find(q => q.casa === this.currentPosition);
+        const pergunta = casaAtual ? casaAtual.pergunta : null;
+        const alternativas = casaAtual ? casaAtual.alternativas : [];
+
+        // Exibe a pergunta
+        const perguntaElement = document.createElement('h2');
+        perguntaElement.textContent = pergunta ? pergunta.enunciado : 'Pergunta não encontrada';
+        modal.appendChild(perguntaElement);
+
+        // Exibe as alternativas
+        alternativas.forEach(alternativa => {
+            alternativa.respostas.forEach(resposta => {
+                const alternativaBtn = document.createElement('button');
+                alternativaBtn.textContent = resposta;  // Cada alternativa será exibida em um botão separado
+                alternativaBtn.addEventListener('click', () => {
+                    this.verificarResposta(resposta);  // Verifica a resposta selecionada
+                    this.closeModal(modal);  // Fecha o modal
+                });
+                modal.appendChild(alternativaBtn);
+            });
+        });
+        
+        
 
         // Cria o botão de fechar
         const closeButton = document.createElement('button');
@@ -128,17 +181,23 @@ class Player {
         // Adiciona o botão ao modal
         modal.appendChild(closeButton);
 
-        // Adiciona o modal ao corpo do documento
         document.body.appendChild(modal);
+    }
+
+    // Método para verificar a resposta selecionada
+    checkAnswer(modal) {
+        if (this.selectedAnswer === "Brasília") {
+            alert('Você acertou!');
+        } else {
+            alert('Você errou!');
+        }
+        this.closeModal(modal); // Fecha o modal após a resposta
     }
 
     // Método para fechar o modal
     closeModal(modal) {
         document.body.removeChild(modal); // Remove o modal
     }
-
-    // Método para verificar se é a última casa do tabuleiro
-
 }
 
 export default Player;

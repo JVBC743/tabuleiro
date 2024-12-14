@@ -195,22 +195,8 @@ const tabuleiro = [
     //alternativa -> questão -> posição 
 ];
 
- const questions = [
-
-    new Question(1, "Qual é a capital do Brasil?", 1),
-    //new Question(id-questao, "enunciado", id-alternativas ),
-
-]
-
-//===============================Pergunta com alternativas==============================================================
 
 
-let arrayAssociativo = {
-    "nome": new Square(0,0,0,0, 'black', 'white', 0),
-    "idade": 30,
-    "cidade": "São Paulo"
-};
-// arrayAssociative.nome;
 
 
 

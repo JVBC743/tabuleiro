@@ -1,10 +1,11 @@
 class Alternative {
-    constructor(id, id_question, alternatives, correct) {
+    constructor(id, questionId, respostas, resposta) {
         this.id = id;
-        this.id_question = id_question;
-        this.alternatives = alternatives; // Agora um array de alternativas
-        this.correct = correct; // Alternativa correta
+        this.questionId = questionId;
+        this.respostas = respostas;
+        this.resposta = resposta; // Resposta correta
     }
 }
+
 
 export default Alternative;
