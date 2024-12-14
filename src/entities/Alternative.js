@@ -1,9 +1,9 @@
 class Alternative {
-    constructor(id, questionId, respostas, resposta) {
+    constructor(id, questionId, respostas, respostaCorreta) {
         this.id = id;
         this.questionId = questionId;
-        this.respostas = respostas;
-        this.resposta = resposta; // Resposta correta
+        this.respostas = respostas; // Lista de alternativas
+        this.respostaCorreta = respostaCorreta; // Resposta correta
     }
 }
 

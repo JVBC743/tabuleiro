@@ -26,11 +26,12 @@ class Player {
             new Alternative(1, 1, ["Belo Horizonte", "São Paulo", "Brasília", "Cuiabá"], "Brasília"),
             new Alternative(2, 2, ["Everest", "Kilimanjaro", "Aconcágua", "Mont Blanc"], "Everest")
         ];
+        
 
         // Mapeamento de questões por casa
         this.questoesPorCasa = [
-            { casa: 0, pergunta: this.questoes[0], alternativas: this.alternativas.slice(0, 1) },  // Alternativa 1
-            { casa: 1, pergunta: this.questoes[1], alternativas: this.alternativas.slice(1, 2) }   // Alternativa 2
+            { casa: 1, pergunta: this.questoes[0], alternativas: this.alternativas.slice(0, 1) },  // Alternativa 1
+            { casa: 2, pergunta: this.questoes[1], alternativas: this.alternativas.slice(1, 2) }   // Alternativa 2
         ];
         
     }
@@ -145,31 +146,29 @@ class Player {
         modal.style.alignItems = 'center';
         modal.style.zIndex = '1000';
         modal.id = 'modal';
-
+    
         const casaAtual = this.questoesPorCasa.find(q => q.casa === this.currentPosition);
         const pergunta = casaAtual ? casaAtual.pergunta : null;
         const alternativas = casaAtual ? casaAtual.alternativas : [];
-
+    
         // Exibe a pergunta
         const perguntaElement = document.createElement('h2');
         perguntaElement.textContent = pergunta ? pergunta.enunciado : 'Pergunta não encontrada';
         modal.appendChild(perguntaElement);
-
+    
         // Exibe as alternativas
         alternativas.forEach(alternativa => {
             alternativa.respostas.forEach(resposta => {
                 const alternativaBtn = document.createElement('button');
                 alternativaBtn.textContent = resposta;  // Cada alternativa será exibida em um botão separado
                 alternativaBtn.addEventListener('click', () => {
-                    this.verificarResposta(resposta);  // Verifica a resposta selecionada
-                    this.closeModal(modal);  // Fecha o modal
+                    this.selectedAnswer = resposta;  // Define a resposta selecionada
+                    this.checkAnswer(modal);  // Verifica a resposta selecionada
                 });
                 modal.appendChild(alternativaBtn);
             });
         });
         
-        
-
         // Cria o botão de fechar
         const closeButton = document.createElement('button');
         closeButton.textContent = 'Fechar';
@@ -177,22 +176,30 @@ class Player {
         closeButton.style.fontSize = '16px';
         closeButton.style.cursor = 'pointer';
         closeButton.addEventListener('click', () => this.closeModal(modal));
-
+    
         // Adiciona o botão ao modal
         modal.appendChild(closeButton);
-
+    
         document.body.appendChild(modal);
     }
 
-    // Método para verificar a resposta selecionada
     checkAnswer(modal) {
-        if (this.selectedAnswer === "Brasília") {
+        // Encontra a alternativa correta, com base na pergunta atual
+        const casaAtual = this.questoesPorCasa.find(q => q.casa === this.currentPosition);
+        const alternativas = casaAtual ? casaAtual.alternativas : [];
+    
+        // Encontre a alternativa que é a correta
+        const alternativaCorreta = alternativas.find(a => a.respostaCorreta === this.selectedAnswer);
+    
+        if (alternativaCorreta) {
             alert('Você acertou!');
         } else {
             alert('Você errou!');
         }
+    
         this.closeModal(modal); // Fecha o modal após a resposta
     }
+    
 
     // Método para fechar o modal
     closeModal(modal) {
