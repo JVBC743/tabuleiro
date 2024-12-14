@@ -191,6 +191,9 @@ function updateGame() {
     if (jogador.currentPosition === tabuleiro.length - 1) {
         // Exibe a tela de vitória quando o jogador chega no final
         exibirTelaVitoria(ctx);
+        
+
+
     } else {
         // Desenha o tabuleiro, jogador, dado, etc.
         tabuleiro.forEach(square => square.draw(ctx));

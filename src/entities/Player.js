@@ -70,7 +70,7 @@ class Player {
                 this.currentPosition += this.direction;
 
                 // Não exibe o modal até o movimento estar concluído
-                if (this.currentPosition === this.targetPosition) {
+                if (this.currentPosition === this.targetPosition && this.currentPosition != tabuleiro.length - 1) {
                     this.showModal(); // Exibe a modal apenas quando o movimento for concluído
                 }
 
@@ -136,6 +136,9 @@ class Player {
     closeModal(modal) {
         document.body.removeChild(modal); // Remove o modal
     }
+
+    // Método para verificar se é a última casa do tabuleiro
+
 }
 
 export default Player;
