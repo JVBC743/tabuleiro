@@ -1,6 +1,6 @@
 class Square {
 
-    constructor(x, y, width, height, color, borderColor, borderWidth, position) {
+    constructor(x, y, width, height, color, borderColor, borderWidth) {
         this.x = x;
         this.y = y;
         this.width = width;
@@ -8,7 +8,6 @@ class Square {
         this.color = color;
         this.borderColor = borderColor;  // Cor da borda
         this.borderWidth = borderWidth;  // Largura da borda
-        this.position = position
     }
     draw(ctx) {
         ctx.fillStyle = this.color;

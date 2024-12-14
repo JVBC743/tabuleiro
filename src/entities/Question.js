@@ -7,6 +7,8 @@ class Question{
         this.id_alternatives = id_alternatives
     }
 
+    
+
     mix(){
 
 

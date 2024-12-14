@@ -19,13 +19,7 @@ header, main, footer {
     margin: 20px;
 }
 
-header {
-    font-size: x-large;
-    color:#725842;
-    text-shadow: 5px -1px;
-    -webkit-text-stroke: 2.5px #d09a6d;
 
-}
 
 footer {
     font-size: large;
@@ -45,3 +39,4 @@ footer {
     cursor: pointer;
     border-radius: 20px;
 }
+

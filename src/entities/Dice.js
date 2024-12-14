@@ -27,6 +27,9 @@ class Dice {
         // Seta o valor do dado
         this.currentValue = (this.targetRotation / 90) + 1;
 
+        // Reseta a rotação para garantir a animação completa da próxima vez
+        this.rotation = 0;
+
         // Anima a rotação
         this.animateRoll();
     }
@@ -103,7 +106,7 @@ class Dice {
 
     // Animação de rotação do dado
     animateRoll() {
-        let rotationSpeed = 1; // Velocidade da rotação
+        let rotationSpeed = 6; // Velocidade da rotação
         let animationFrame = () => {
             if (this.rotation < this.targetRotation) {
                 this.rotation += rotationSpeed;
