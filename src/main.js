@@ -1,14 +1,11 @@
-import Square from "../src/entities/Square.js";
-import Player from "../src/entities/Player.js";
-import Question from "../src/entities/Question.js"
-import Alternative from "../src/entities/Alternative.js"
-import Dice from "../src/entities/Dice.js";
-import Confete from "./entities/Confete.js";
+import Square from "./entities/Square.js";
+import Player from "./entities/Player.js";
+import Dice from "./entities/Dice.js";
+import Confete from "./entities/Confete.js"
 
 // Obtém o contexto do canvas (onde será desenhado o jogo)
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
-
 
 const fundoImagem = new Image();
 fundoImagem.src = 'http://177.5.73.56:2222/tabuleiro/assets/images/madeira2.jpeg'; // Substitua com o caminho correto da imagem de fundo
@@ -39,6 +36,42 @@ function animateConfetti() {
     requestAnimationFrame(animateConfetti); // Mantém a animação dos confetes
 }
 
+function exibirTelaBranca(ctx) {
+    // Desenha a tela branca
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpa a tela antes de desenhar a tela branca
+    ctx.fillStyle = 'rgba(255, 255, 255, 1)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Desenha o botão de fechar
+    const buttonWidth = 100;
+    const buttonHeight = 40;
+    const buttonX = (canvas.width - buttonWidth) / 2;
+    const buttonY = (canvas.height - buttonHeight) / 2;
+
+    ctx.fillStyle = '#FF6347'; // Cor vermelha
+    ctx.fillRect(buttonX, buttonY, buttonWidth, buttonHeight);
+
+    ctx.fillStyle = 'white';
+    ctx.font = '20px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText('Fechar', buttonX + buttonWidth / 2, buttonY + buttonHeight / 2 + 7);
+
+    // Adiciona o evento de clique
+    canvas.addEventListener('click', function handleClick(event) {
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+
+        // Verifica se o clique está dentro do botão
+        if (
+            mouseX >= buttonX && mouseX <= buttonX + buttonWidth &&
+            mouseY >= buttonY && mouseY <= buttonY + buttonHeight
+        ) {
+            // Remove o evento e redefine o estado do jogo
+            canvas.removeEventListener('click', handleClick);
+            updateGame(); // Retorna ao jogo
+        }
+    });
+}
 
 // Função para desenhar a tela personalizada de vitória
 function exibirTelaVitoria(ctx) {
@@ -160,27 +193,15 @@ const tabuleiro = [
     //alternativa -> questão -> posição 
 ];
 
- const questions = [
-
-    new Question(1, "Qual é a capital do Brasil?", 1),
-    //new Question(id-questao, "enunciado", id-alternativas ),
-
-]
-
-//===============================Pergunta com alternativas==============================================================
 
 
-let arrayAssociativo = {
-    "nome": new Square(0,0,0,0, 'black', 'white', 0),
-    "idade": 30,
-    "cidade": "São Paulo"
-};
-// arrayAssociative.nome;
 
 
 
 const jogador = new Player(0, 0, 70, 70, '#FF4500');
 const dado = new Dice(800, 700, 100);
+jogador.dado = dado;
+jogador.tabuleiro = tabuleiro;
 
 // Função para desenhar o jogo (tabuleiro, jogador, dado, etc.)
 function updateGame() {
@@ -191,9 +212,6 @@ function updateGame() {
     if (jogador.currentPosition === tabuleiro.length - 1) {
         // Exibe a tela de vitória quando o jogador chega no final
         exibirTelaVitoria(ctx);
-        
-
-
     } else {
         // Desenha o tabuleiro, jogador, dado, etc.
         tabuleiro.forEach(square => square.draw(ctx));
@@ -214,6 +232,8 @@ canvas.addEventListener("click", (event) => {
 
         const diceValue = dado.currentValue; // O valor do dado
         jogador.moveForward(diceValue, tabuleiro); // Move o jogador para frente com base no valor do dado
+        exibirTelaBranca(ctx);
+
     }
 });
 

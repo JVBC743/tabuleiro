@@ -15,104 +15,339 @@ class Player {
         this.direction = 1; // Direção do movimento (1 para frente, -1 para trás)
         this.animationFrameId = null; // Para armazenar o id da animação
         this.selectedAnswer = null; // Variável para armazenar a resposta selecionada
+        this.dado = null;
+        this.tabuleiro = null;
 
         // Questões e alternativas mapeadas
         this.questoes = [
-            new Question(1, "enunciado"),//azul
-            new Question(2, "enunciado"),
-            new Question(3, "enunciado"),//azul
-            new Question(4, "enunciado"),
-            new Question(5, "enunciado"),//azul
-            new Question(6, "enunciado"),
-            new Question(7, "enunciado"),
-            new Question(8, "enunciado"),//azul
-            new Question(9, "enunciado"),
-            new Question(10, "enunciado"),//azul
-            new Question(11, "enunciado"),//azul
-            new Question(12, "enunciado"),
-            new Question(13, "enunciado"),//azul
-            new Question(14, "enunciado"),
-            new Question(15, "enunciado"),//azul
-            new Question(16, "enunciado"),//azul
-            new Question(17, "enunciado"),//azul
-            new Question(18, "enunciado"),
-            new Question(19, "enunciado"),
-            new Question(20, "enunciado"),
-            new Question(21, "enunciado"),//azul
-            new Question(22, "enunciado"),//azul
-            new Question(23, "enunciado"),
-            new Question(24, "enunciado"),//azul
-            new Question(25, "enunciado"),//azul
-            new Question(26, "enunciado"),
-            new Question(27, "enunciado"),//azul
-            new Question(28, "enunciado"),
-            new Question(29, "enunciado"),
-            new Question(30, "enunciado"),//azul
-            new Question(31, "enunciado"),
-            new Question(32, "enunciado"),//azul
-            new Question(33, "enunciado"),
-            new Question(34, "enunciado"),//azul
-            new Question(35, "enunciado"),
-            new Question(36, "enunciado"),//azul
-            new Question(37, "enunciado"),
-            new Question(38, "enunciado"),//azul
-            
+
+
+            new Question(1, "O que é hardware em um computador?"),//azul
+            new Question(2, "enunciado"),//verde
+            new Question(3, "O que significa a sigla CPU?"),//azul
+            new Question(4, "enunciado"),//verde
+            new Question(5, "Qual destes é um sistema operacional?"),//azul
+            new Question(6, "enunciado"),//verde
+            new Question(7, "enunciado"),//verde
+            new Question(8, "O que é uma rede de computadores?"),//azul
+            new Question(9, "enunciado"),//verde
+            new Question(10, "Qual é a função do protocolo HTTP?"),//azul
+            new Question(12, " O que significa 'open source'"),//azul
+            new Question(13, "enunciado"),//verde
+            new Question(14, "Qual linguagem é mais usada para desenvolvimento web?"),//azul
+            new Question(15, "enunciado"),//verde
+            new Question(16, "Qual é o principal objetivo de um firewall?"),//azul
+            new Question(17, "O que é virtualização?"),//azul
+            new Question(18, "Qual é a diferença entre IPv4 e IPv6?"),//azul
+            new Question(20, "enunciado"),//verde
+            new Question(21, "enunciado"),//verde
+            new Question(22, "enunciado"),//verde
+            new Question(23, "Qual é a função do DNS em redes?"),//azul
+            new Question(24, "O que é 'Machine Learning'"),//azul
+            new Question(25, "enunciado"),//verde
+            new Question(26, "Qual é a vantagem de um sistema de arquivos NTFS?"),//azul
+            new Question(27, "O que significa SLA em serviços de TI?"),//azul
+            new Question(28, "enunciado"),//verde
+            new Question(29, "Qual o conceito de DevOps?"),//azul
+            new Question(30, "enunciado"),//verde
+            new Question(31, "enunciado"),//verde
+            new Question(32, "O que é um ataque de força bruta?"),//azul
+            new Question(33, "enunciado"),//verde
+            new Question(34, "Qual é a função do protocolo SSH?"),//azul
+            new Question(35, "enunciado"),//verde
+            new Question(36, "O que é 'containerização' em TI?"),//azul
+            new Question(37, "enunciado"),//verde
+            new Question(38, "Qual é o objetivo principal de um balanceador de carga?"),//azul
             // new Question(num, "enunciado")
+
+            
+
+            // 18. Qual é a função do protocolo SSH?
+
+            // a) Transferir arquivos entre servidores
+            // b) Estabelecer conexões remotas seguras
+            // c) Gerenciar pacotes de rede
+            // d) Configurar permissões de usuários
+
+            // Resposta: b
+
+            // 19. O que é "containerização" em TI?
+
+            // a) Divisão de servidores em ambientes isolados
+            // b) Virtualização de hardware para performance
+            // c) Uso de ferramentas para compactar aplicativos
+            // d) Compartilhamento de arquivos em redes privadas
+
+            // Resposta: a
+
+            // 20. Qual é o objetivo principal de um balanceador de carga?
+
+            // a) Diminuir a largura de banda necessária
+            // b) Distribuir o tráfego entre servidores para otimizar desempenho
+            // c) Proteger redes contra acessos não autorizados
+            // d) Monitorar e corrigir falhas automaticamente
+
+            // Resposta: b
 
         ];
 
         this.alternativas = [
-            new Alternative(1, 1, ["Belo Horizonte", "São Paulo", "Brasília", "Cuiabá"], "Brasília"),
-            new Alternative(2, 2, ["Everest", "Kilimanjaro", "Aconcágua", "Mont Blanc"], "Everest"),
-            new Alternative(3, 3, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
+            new Alternative(1, 1, ["a) Softwares que rodam no sistema", "b) Componentes físicos de um computador", "c) Dados armazenados em nuvem", "d) Programas utilizados para edição de texto"], "RESP"),//azul
+
+            // 1. O que é hardware em um computador?
+
+            // a) Softwares que rodam no sistema
+            // b) Componentes físicos de um computador
+            // c) Dados armazenados em nuvem
+            // d) Programas utilizados para edição de texto
+
+            // Resposta: b
+            new Alternative(2, 2, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
+
+            new Alternative(3, 3, ["a) Central Processing Unit", "b) Computer Programming Unit", "c) Central Power Unit", "d) Core Programming Utility"], "RESP"),//azul
+
+            // 2. O que significa a sigla CPU?
+
+            // a) Central Processing Unit
+            // b) Computer Programming Unit
+            // c) Central Power Unit
+            // d) Core Programming Utility
+
+
             new Alternative(4, 4, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(5, 5, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
+            new Alternative(5, 5, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
+
+            // 3. Qual destes é um sistema operacional?
+
+            // a) Python
+            // b) Windows
+            // c) Chrome
+            // d) HTML
+
             new Alternative(6, 6, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
             new Alternative(7, 7, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(8, 8, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
+            new Alternative(8, 8, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
+
+            // 4. O que é uma rede de computadores?
+
+            // a) Uma conexão entre usuários em um servidor local
+            // b) Um conjunto de computadores interligados que compartilham recursos
+            // c) Apenas uma conexão com a internet
+            // d) Um programa de desenvolvimento de sistemas
+
+            // Resposta: b
+
             new Alternative(9, 9, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(10, 10, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(11, 11, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
+            new Alternative(10, 10, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
+
+            // 6. O que significa "open source"?
+
+            // a) Software que é gratuito para usar
+            // b) Software cujo código-fonte está disponível para modificação
+            // c) Um programa que exige licença paga
+            // d) Código exclusivo desenvolvido por empresas privadas
+
+            // Resposta: b
+
+
+            new Alternative(11, 11, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
+
+
+            // 7. Qual linguagem é mais usada para desenvolvimento web?
+
+            // a) Java
+            // b) C++
+            // c) HTML
+            // d) Swift
+
+            // Resposta: c
+
             new Alternative(12, 12, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(13, 13, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
+            new Alternative(13, 13, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
+
+
+            // 8. Qual é o principal objetivo de um firewall?
+
+            // a) Proteger contra spam
+            // b) Bloquear sites inseguros
+            // c) Filtrar e controlar o tráfego de rede para segurança
+            // d) Acelerar conexões de internet
+
+            // Resposta: c
+
+
             new Alternative(14, 14, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(15, 15, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(16, 16, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(17, 17, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
+            new Alternative(15, 15, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
+
+            // 9. O que é virtualização?
+
+            // a) Simulação de hardware em um ambiente digital
+            // b) Criação de um software a partir de código aberto
+            // c) Divisão de redes para maior segurança
+            // d) Compactação de dados para armazenamento
+
+            // Resposta: a
+
+            new Alternative(16, 16, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
+
+            // 10. Qual é a diferença entre IPv4 e IPv6?
+
+            // a) O IPv4 é mais rápido que o IPv6
+            // b) O IPv6 suporta um maior número de endereços IP
+            // c) O IPv4 é usado apenas em redes locais
+            // d) O IPv6 é específico para redes sem fio
+
+            // Resposta: b
+
+
+            new Alternative(17, 17, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
+
+
+            // 11. O que é um banco de dados relacional?
+
+            // a) Um banco que armazena dados de forma não estruturada
+            // b) Um banco que usa tabelas interconectadas para organizar dados
+            // c) Um banco que gerencia apenas textos e números
+            // d) Um banco que não suporta SQL
+
+            // Resposta: b
+
+
             new Alternative(18, 18, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
             new Alternative(19, 19, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
             new Alternative(20, 20, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(21, 21, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(22, 22, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
+            new Alternative(21, 21, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
+
+
+            // 12. Qual é a função do DNS em redes?
+
+            // a) Proteger contra ataques DDoS
+            // b) Traduzir nomes de domínio em endereços IP
+            // c) Aumentar a velocidade da internet
+            // d) Controlar o tráfego de rede interno
+
+            // Resposta: b
+
+            
+            new Alternative(22, 22, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
+
+            // 13. O que é "Machine Learning"?
+
+            // a) Desenvolvimento de hardwares inteligentes
+            // b) Um ramo da IA que cria algoritmos capazes de aprender com dados
+            // c) A técnica de programação para dispositivos móveis
+            // d) Uma abordagem para desenvolvimento de software ágil
+
+            // Resposta: b
+
             new Alternative(23, 23, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(24, 24, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(25, 25, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
+            new Alternative(24, 24, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
+
+            // 14. Qual é a vantagem de um sistema de arquivos NTFS?
+
+            // a) Suporta criptografia nativa
+            // b) É usado apenas em dispositivos móveis
+            // c) É mais rápido que FAT32 para leitura de discos
+            // d) Não suporta permissões de usuários
+
+            // Resposta: a
+
+
+            new Alternative(25, 25, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
+
+            // 15. O que significa SLA em serviços de TI?
+
+            // a) Service Level Agreement
+            // b) System Level Application
+            // c) Secure Login Authentication
+            // d) Software Level Adjustment
+
+            // Resposta: a
+
             new Alternative(26, 26, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(27, 27, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
+            new Alternative(27, 27, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
+
+            // 16. Qual o conceito de DevOps?
+
+            // a) Integração de desenvolvimento e operações para entrega contínua
+            // b) Um sistema de monitoramento de redes
+            // c) Uma linguagem de programação específica
+            // d) Um método de controle de acesso
+
+            // Resposta: a
+
             new Alternative(28, 28, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
             new Alternative(29, 29, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(30, 30, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
+            new Alternative(30, 30, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
+
+            // 17. O que é um ataque de força bruta?
+
+            // a) Tentativa de quebrar senhas tentando combinações possíveis
+            // b) Explorar vulnerabilidades em sistemas operacionais
+            // c) Injetar comandos maliciosos em SQL
+            // d) Enviar pacotes corrompidos para derrubar servidores
+
+            // Resposta: a
+
+
             new Alternative(31, 31, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(32, 32, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
+            new Alternative(32, 32, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
             new Alternative(33, 33, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(34, 34, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
+            new Alternative(34, 34, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
             new Alternative(35, 35, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(36, 36, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
+            new Alternative(36, 36, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
             new Alternative(37, 37, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(38, 38, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
+            new Alternative(38, 38, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
 
 
             //new Alternative(id_alt, id_perg, ["A_1", "A_2", "A_3", "A_4"], "RESP")
         ];
-        
+
 
         // Mapeamento de questões por casa
         this.questoesPorCasa = [
             { casa: 1, pergunta: this.questoes[1], alternativas: this.alternativas.slice(1, 2) },  // Alternativa 1
-            { casa: 2, pergunta: this.questoes[2], alternativas: this.alternativas.slice(2, 3) }   // Alternativa 2
+            { casa: 2, pergunta: this.questoes[2], alternativas: this.alternativas.slice(2, 3) },  // Alternativa 2
+            { casa: 3, pergunta: this.questoes[3], alternativas: this.alternativas.slice(3, 4) },  // Alternativa 2
+            { casa: 4, pergunta: this.questoes[4], alternativas: this.alternativas.slice(4, 5) },   // Alternativa 2
+            { casa: 5, pergunta: this.questoes[5], alternativas: this.alternativas.slice(5, 6) },   // Alternativa 2
+            { casa: 6, pergunta: this.questoes[6], alternativas: this.alternativas.slice(6, 7) },   // Alternativa 2
+            { casa: 7, pergunta: this.questoes[7], alternativas: this.alternativas.slice(7, 8) },   // Alternativa 2
+            { casa: 8, pergunta: this.questoes[8], alternativas: this.alternativas.slice(8, 9) },   // Alternativa 2
+            { casa: 9, pergunta: this.questoes[9], alternativas: this.alternativas.slice(9, 10) },   // Alternativa 2
+            { casa: 10, pergunta: this.questoes[10], alternativas: this.alternativas.slice(10, 11) },   // Alternativa 2
+            { casa: 11, pergunta: this.questoes[11], alternativas: this.alternativas.slice(11, 12) },   // Alternativa 2
+            { casa: 12, pergunta: this.questoes[12], alternativas: this.alternativas.slice(12, 13) },   // Alternativa 2
+            { casa: 13, pergunta: this.questoes[13], alternativas: this.alternativas.slice(13, 14) },   // Alternativa 2
+            { casa: 14, pergunta: this.questoes[14], alternativas: this.alternativas.slice(14, 15) },   // Alternativa 2
+            { casa: 15, pergunta: this.questoes[15], alternativas: this.alternativas.slice(15, 16) },   // Alternativa 2
+            { casa: 16, pergunta: this.questoes[16], alternativas: this.alternativas.slice(16, 17) },   // Alternativa 2
+            { casa: 17, pergunta: this.questoes[17], alternativas: this.alternativas.slice(17, 18) },   // Alternativa 2
+            { casa: 18, pergunta: this.questoes[18], alternativas: this.alternativas.slice(18, 19) },   // Alternativa 2
+            { casa: 19, pergunta: this.questoes[19], alternativas: this.alternativas.slice(19, 20) },   // Alternativa 2
+            { casa: 20, pergunta: this.questoes[20], alternativas: this.alternativas.slice(20, 21) },   // Alternativa 2
+            { casa: 21, pergunta: this.questoes[21], alternativas: this.alternativas.slice(21, 22) },   // Alternativa 2
+            { casa: 22, pergunta: this.questoes[22], alternativas: this.alternativas.slice(22, 23) },   // Alternativa 2
+            { casa: 23, pergunta: this.questoes[23], alternativas: this.alternativas.slice(23, 24) },   // Alternativa 2
+            { casa: 24, pergunta: this.questoes[24], alternativas: this.alternativas.slice(24, 25) },   // Alternativa 2
+            { casa: 25, pergunta: this.questoes[25], alternativas: this.alternativas.slice(25, 26) },   // Alternativa 2
+            { casa: 26, pergunta: this.questoes[26], alternativas: this.alternativas.slice(26, 27) },   // Alternativa 2
+            { casa: 27, pergunta: this.questoes[27], alternativas: this.alternativas.slice(27, 28) },   // Alternativa 2
+            { casa: 28, pergunta: this.questoes[28], alternativas: this.alternativas.slice(28, 29) },   // Alternativa 2
+            { casa: 29, pergunta: this.questoes[29], alternativas: this.alternativas.slice(29, 30) },   // Alternativa 2
+            { casa: 30, pergunta: this.questoes[30], alternativas: this.alternativas.slice(30, 31) },   // Alternativa 2
+            { casa: 31, pergunta: this.questoes[31], alternativas: this.alternativas.slice(31, 32) },   // Alternativa 2
+            { casa: 32, pergunta: this.questoes[32], alternativas: this.alternativas.slice(32, 33) },   // Alternativa 2
+            { casa: 33, pergunta: this.questoes[33], alternativas: this.alternativas.slice(33, 34) },   // Alternativa 2
+            { casa: 34, pergunta: this.questoes[34], alternativas: this.alternativas.slice(34, 35) },   // Alternativa 2
+            { casa: 35, pergunta: this.questoes[35], alternativas: this.alternativas.slice(35, 36) },   // Alternativa 2
+            { casa: 36, pergunta: this.questoes[36], alternativas: this.alternativas.slice(36, 37) },   // Alternativa 2
+            { casa: 37, pergunta: this.questoes[37], alternativas: this.alternativas.slice(37, 38) },   // Alternativa 2
+            { casa: 38, pergunta: this.questoes[38], alternativas: this.alternativas.slice(38, 39) }   // Alternativa 2
+
             //{ casa: 'posicao', pergunta: this.questoes[posicao], alternativas: this.alternativas.slice(prim_valor, seg_valor) }
         ];
-        
+
     }
 
     draw(ctx) {
@@ -178,7 +413,7 @@ class Player {
                 this.currentPosition += this.direction;
 
                 // Não exibe o modal até o movimento estar concluído
-                if (this.currentPosition === this.targetPosition && this.currentPosition != tabuleiro.length - 1) {
+                if (this.currentPosition === this.targetPosition && this.currentPosition != tabuleiro.length - 1 && this.currentPosition != 0) {
                     this.showModal(); // Exibe a modal apenas quando o movimento for concluído
                 }
 
@@ -187,6 +422,7 @@ class Player {
                     requestAnimationFrame(() => this.moveToNextSquare(tabuleiro)); // Próxima animação
                 } else {
                     this.isMoving = false; // Finaliza a movimentação
+                    this.direction = 1; // Reseta a direção para frente após o movimento
                 }
             } else {
                 // Continua movendo até a próxima casa
@@ -205,10 +441,9 @@ class Player {
 
             this.isMoving = true; // Inicia o movimento para trás
             this.direction = -1; // Direção para trás
-            this.moveToNextSquare(tabuleiro);
+            this.moveToNextSquare(tabuleiro); // Inicia o movimento para a casa anterior
         }
     }
-
     // Método para exibir a tela modal com as perguntas e alternativas
     showModal() {
         // Cria o modal
@@ -225,40 +460,82 @@ class Player {
         modal.style.alignItems = 'center';
         modal.style.zIndex = '1000';
         modal.id = 'modal';
-    
+
         const casaAtual = this.questoesPorCasa.find(q => q.casa === this.currentPosition);
         const pergunta = casaAtual ? casaAtual.pergunta : null;
         const alternativas = casaAtual ? casaAtual.alternativas : [];
-    
+
         // Exibe a pergunta
         const perguntaElement = document.createElement('h2');
         perguntaElement.textContent = pergunta ? pergunta.enunciado : 'Pergunta não encontrada';
+
+        // Estilos personalizados para o enunciado
+        perguntaElement.style.fontFamily = 'Arial, sans-serif';  // Fonte do enunciado
+        perguntaElement.style.fontSize = '24px';  // Tamanho da fonte
+        perguntaElement.style.fontWeight = 'bold';  // Deixa o texto em negrito
+        perguntaElement.style.color = '#333';  // Cor do texto (um cinza escuro)
+        perguntaElement.style.textAlign = 'center';  // Alinha o texto ao centro
+        perguntaElement.style.marginBottom = '20px';  // Espaço abaixo do enunciado
+        perguntaElement.style.padding = '10px';  // Espaço interno para um efeito de "margem interna"
+        perguntaElement.style.backgroundColor = '#f4f4f4';  // Cor de fundo suave
+        perguntaElement.style.borderRadius = '8px';  // Bordas arredondadas
+        perguntaElement.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';  // Sombra suave
+        perguntaElement.style.transition = 'all 0.3s ease';  // Transição suave para interatividade
+
+        // Efeito ao passar o mouse (hover)
+        perguntaElement.addEventListener('mouseover', () => {
+            perguntaElement.style.transform = 'scale(1.05)';  // Aumenta um pouco o tamanho do enunciado
+            perguntaElement.style.boxShadow = '0 6px 10px rgba(0, 0, 0, 0.2)';  // Sombra mais intensa
+        });
+
+        perguntaElement.addEventListener('mouseout', () => {
+            perguntaElement.style.transform = 'scale(1)';  // Retorna ao tamanho original
+            perguntaElement.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';  // Sombra suave
+        });
+
+        // Adiciona o enunciado ao modal
         modal.appendChild(perguntaElement);
-    
+
+
         // Exibe as alternativas
         alternativas.forEach(alternativa => {
             alternativa.respostas.forEach(resposta => {
                 const alternativaBtn = document.createElement('button');
                 alternativaBtn.textContent = resposta;  // Cada alternativa será exibida em um botão separado
+
+                // Estilos personalizados para o botão
+                alternativaBtn.style.margin = '10px';  // Margem para afastar os botões
+                alternativaBtn.style.padding = '10px 20px';  // Espaçamento interno do botão
+                alternativaBtn.style.border = 'none';  // Remove a borda padrão
+                alternativaBtn.style.borderRadius = '8px';  // Bordas arredondadas
+                alternativaBtn.style.backgroundColor = '#4CAF50';  // Cor de fundo (verde)
+                alternativaBtn.style.color = '#fff';  // Cor do texto (branco)
+                alternativaBtn.style.fontSize = '16px';  // Tamanho da fonte
+                alternativaBtn.style.cursor = 'pointer';  // Cursor para indicar que é clicável
+                alternativaBtn.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';  // Efeito de sombra para o efeito 3D
+                alternativaBtn.style.transition = 'all 0.3s ease';  // Transição suave para efeitos de hover
+
+                // Efeito ao passar o mouse (hover)
+                alternativaBtn.addEventListener('mouseover', () => {
+                    alternativaBtn.style.transform = 'translateY(-3px)';  // Levanta o botão
+                    alternativaBtn.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.2)';  // Sombra mais intensa
+                });
+
+                alternativaBtn.addEventListener('mouseout', () => {
+                    alternativaBtn.style.transform = 'translateY(0)';  // Retorna à posição original
+                    alternativaBtn.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';  // Sombra mais suave
+                });
+
                 alternativaBtn.addEventListener('click', () => {
                     this.selectedAnswer = resposta;  // Define a resposta selecionada
                     this.checkAnswer(modal);  // Verifica a resposta selecionada
                 });
+
                 modal.appendChild(alternativaBtn);
             });
         });
-        
-        // Cria o botão de fechar
-        const closeButton = document.createElement('button');
-        closeButton.textContent = 'Fechar';
-        closeButton.style.padding = '10px 20px';
-        closeButton.style.fontSize = '16px';
-        closeButton.style.cursor = 'pointer';
-        closeButton.addEventListener('click', () => this.closeModal(modal));
-    
-        // Adiciona o botão ao modal
-        modal.appendChild(closeButton);
-    
+
+
         document.body.appendChild(modal);
     }
 
@@ -266,21 +543,29 @@ class Player {
         // Encontra a alternativa correta, com base na pergunta atual
         const casaAtual = this.questoesPorCasa.find(q => q.casa === this.currentPosition);
         const alternativas = casaAtual ? casaAtual.alternativas : [];
-    
+
         // Encontre a alternativa que é a correta
         const alternativaCorreta = alternativas.find(a => a.respostaCorreta === this.selectedAnswer);
-    
+
         if (alternativaCorreta) {
             alert('Você acertou!');
         } else {
-            alert('Você errou!');
+            // Quando o jogador erra, roda o dado
+            const dice = this.dado;
+            dice.roll();
+
+            // Exibe o valor do dado
+            alert('Você errou! O dado rolou: ' + dice.currentValue);
+            this.closeModal(modal);
+
+            // Faz o jogador andar para trás com o valor do dado
+            this.moveBackward(dice.currentValue, this.tabuleiro);
+            return null;
         }
-    
+
         this.closeModal(modal); // Fecha o modal após a resposta
     }
-    
 
-    // Método para fechar o modal
     closeModal(modal) {
         document.body.removeChild(modal); // Remove o modal
     }
