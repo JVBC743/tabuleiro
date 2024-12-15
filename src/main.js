@@ -149,49 +149,48 @@ resizeCanvas();
 // Função para atualizar a cena do jogo
 
 const tabuleiro = [
-    new Square(10, 20, 100, 100, 'white', 'black', 5),
-    new Square(110, 20, 100, 100, '#87CEFA', 'black', 5), // Azul
-    new Square(210, 20, 100, 100, '#90EE90', 'black', 5),
-    new Square(310, 20, 100, 100, '#87CEFA', 'black', 5),// Azul
-    new Square(410, 20, 100, 100, '#90EE90', 'black', 5),
-    new Square(510, 20, 100, 100, '#87CEFA', 'black', 5),// Azul
-    new Square(510, 120, 100, 100, '#90EE90', 'black', 5),
-    new Square(510, 220, 100, 100, '#90EE90', 'black', 5),
-    new Square(410, 220, 100, 100, '#87CEFA', 'black', 5),// Azul
-    new Square(410, 320, 100, 100, '#90EE90', 'black', 5),
-    new Square(410, 420, 100, 100, '#87CEFA', 'black', 5),// Azul
-    new Square(410, 520, 100, 100, '#87CEFA', 'black', 5),// Azul
-    new Square(510, 520, 100, 100, '#90EE90', 'black', 5),
-    new Square(610, 520, 100, 100, '#87CEFA', 'black', 5),// Azul
-    new Square(710, 520, 100, 100, '#90EE90', 'black', 5),
-    new Square(810, 520, 100, 100, '#87CEFA', 'black', 5),// Azul
-    new Square(910, 520, 100, 100, '#87CEFA', 'black', 5),// Azul
-    new Square(910, 420, 100, 100, '#87CEFA', 'black', 5),// Azul
-    new Square(910, 320, 100, 100, '#90EE90', 'black', 5),
-    new Square(810, 320, 100, 100, '#90EE90', 'black', 5),
-    new Square(710, 320, 100, 100, '#90EE90', 'black', 5),
-    new Square(710, 220, 100, 100, '#87CEFA', 'black', 5),// Azul
-    new Square(710,120, 100, 100, '#87CEFA', 'black', 5),// Azul
-    new Square(810,120, 100, 100, '#90EE90', 'black', 5),
-    new Square(910,120, 100, 100, '#87CEFA', 'black', 5),// Azul
-    new Square(910, 20, 100, 100, '#87CEFA', 'black', 5),// Azul
-    new Square(1010, 20, 100, 100, '#90EE90', 'black', 5),
-    new Square(1110, 20, 100, 100, '#87CEFA', 'black', 5),// Azul
-    new Square(1210, 20, 100, 100, '#90EE90', 'black', 5),
-    new Square(1310, 20, 100, 100, '#90EE90', 'black', 5),
-    new Square(1310, 120, 100, 100, '#87CEFA', 'black', 5),// Azul
-    new Square(1310, 220, 100, 100, '#90EE90', 'black', 5),
-    new Square(1210, 220, 100, 100, '#87CEFA', 'black', 5),// Azul
-    new Square(1110, 220, 100, 100, '#90EE90', 'black', 5),
-    new Square(1110, 320, 100, 100, '#87CEFA', 'black', 5),// Azul
-    new Square(1110, 420, 100, 100, '#90EE90', 'black', 5),
-    new Square(1110, 520, 100, 100, '#87CEFA', 'black', 5),// Azul
-    new Square(1210, 520, 100, 100, '#90EE90', 'black', 5),
-    new Square(1310, 520, 100, 100, '#87CEFA', 'black', 5),// Azul
-    new Square(1410, 520, 100, 100, 'black', 'black', 5),
-
-    //alternativa -> questão -> posição 
+    new Square(10, 20, 100, 100, 'white', 'black', 5), // Branco (inicial)
+    new Square(110, 20, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 1
+    new Square(210, 20, 100, 100, '#90EE90', 'black', 5), // Verde -> Questão 2
+    new Square(310, 20, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 3
+    new Square(410, 20, 100, 100, '#90EE90', 'black', 5), // Verde -> Questão 4
+    new Square(510, 20, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 5
+    new Square(510, 120, 100, 100, '#90EE90', 'black', 5), // Verde -> Questão 6
+    new Square(510, 220, 100, 100, '#90EE90', 'black', 5), // Verde -> Questão 7
+    new Square(410, 220, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 8
+    new Square(410, 320, 100, 100, '#90EE90', 'black', 5), // Verde -> Questão 9
+    new Square(410, 420, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 10
+    new Square(410, 520, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 11
+    new Square(510, 520, 100, 100, '#90EE90', 'black', 5), // Verde -> Questão 12
+    new Square(610, 520, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 13
+    new Square(710, 520, 100, 100, '#90EE90', 'black', 5), // Verde -> Questão 14
+    new Square(810, 520, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 15
+    new Square(910, 520, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 16
+    new Square(910, 420, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 17
+    new Square(910, 320, 100, 100, '#90EE90', 'black', 5), // Verde -> Questão 18
+    new Square(810, 320, 100, 100, '#90EE90', 'black', 5), // Verde -> Questão 19
+    new Square(710, 320, 100, 100, '#90EE90', 'black', 5), // Verde -> Questão 20
+    new Square(710, 220, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 21
+    new Square(710, 120, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 22
+    new Square(810, 120, 100, 100, '#90EE90', 'black', 5), // Verde -> Questão 23
+    new Square(910, 120, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 24
+    new Square(910, 20, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 25
+    new Square(1010, 20, 100, 100, '#90EE90', 'black', 5), // Verde -> Questão 26
+    new Square(1110, 20, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 27
+    new Square(1210, 20, 100, 100, '#90EE90', 'black', 5), // Verde -> Questão 28
+    new Square(1310, 20, 100, 100, '#90EE90', 'black', 5), // Verde -> Questão 29
+    new Square(1310, 120, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 30
+    new Square(1310, 220, 100, 100, '#90EE90', 'black', 5), // Verde -> Questão 31
+    new Square(1210, 220, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 32
+    new Square(1110, 220, 100, 100, '#90EE90', 'black', 5), // Verde -> Questão 33
+    new Square(1110, 320, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 34
+    new Square(1110, 420, 100, 100, '#90EE90', 'black', 5), // Verde -> Questão 35
+    new Square(1110, 520, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 36
+    new Square(1210, 520, 100, 100, '#90EE90', 'black', 5), // Verde -> Questão 37
+    new Square(1310, 520, 100, 100, '#87CEFA', 'black', 5), // Azul -> Questão 38
+    new Square(1410, 520, 100, 100, 'black', 'black', 5), // Preto (final) - Sem questão
 ];
+
 
 
 

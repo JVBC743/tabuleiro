@@ -20,75 +20,188 @@ class Player {
 
         // Questões e alternativas mapeadas
         this.questoes = [
+            new Question(1, "O que é hardware em um computador?"), // Azul -> Quadrado 1
+            new Question(2, "enunciado"), // Verde -> Quadrado 2
+            new Question(3, "O que significa a sigla CPU?"), // Azul -> Quadrado 3
+            new Question(4, "enunciado"), // Verde -> Quadrado 4
+            new Question(5, "Qual destes é um sistema operacional?"), // Azul -> Quadrado 5
+            new Question(6, "enunciado"), // Verde -> Quadrado 6
+            new Question(7, "enunciado"), // Verde -> Quadrado 7
+            new Question(8, "O que é uma rede de computadores?"), // Azul -> Quadrado 8
+            new Question(9, "enunciado"), // Verde -> Quadrado 9
+            new Question(10, "Qual é a função do protocolo HTTP?"), // Azul -> Quadrado 10
+            new Question(11, "O que significa 'open source'"), // Azul -> Quadrado 11
+            new Question(12, "enunciado"), // Verde -> Quadrado 12
+            new Question(13, "Qual linguagem é mais usada para desenvolvimento web?"), // Azul -> Quadrado 13 
+            new Question(14, "enunciado"), // Verde -> Quadrado 14
+            new Question(15, "Qual é o principal objetivo de um firewall?"), // Azul -> Quadrado 15
+            new Question(16, "O que é virtualização?"), // Azul -> Quadrado 16
+            new Question(17, "Qual é a diferença entre IPv4 e IPv6?"), // Azul -> Quadrado 17
+            new Question(18, "enunciado"), // Verte -> Quadrado 18
+            new Question(19, "enunciado"), // Verde -> Quadrado 19
+            new Question(20, "enunciado"), // Verde -> Quadrado 20
+            new Question(21, "O que é a camada de aplicação no modelo OSI?"), // Azul -> Quadrado 21
+            new Question(22, "O que é 'Machine Learning'"), // Azul -> Quadrado 22
+            new Question(23, "enunciado"), // Verde -> Quadrado 23
+            new Question(24, "Qual é a vantagem de um sistema de arquivos NTFS?"), // Azul -> Quadrado 24
+            new Question(25, "O que significa SLA em serviços de TI?"), // Azul -> Quadrado 25
+            new Question(26, "enunciado"), // Verde -> Quadrado 26
+            new Question(27, "Qual o conceito de DevOps?"), // Azul -> Quadrado 27
+            new Question(28, "enunciado"), // Verde -> Quadrado 28
+            new Question(29, "enunciado"), // Verde -> Quadrado 29
+            new Question(30, "O que é um ataque de força bruta?"), // Azul -> Quadrado 30
+            new Question(31, "enunciado"), // Verde -> Quadrado 31
+            new Question(32, "Qual é a função do protocolo SSH?"), // Azul -> Quadrado 32
+            new Question(33, "enunciado"), // Verde -> Quadrado 33
+            new Question(34, "O que é 'containerização' em TI?"), // Azul -> Quadrado 34
+            new Question(35, "enunciado"), // Verde -> Quadrado 35
+            new Question(36, "Qual é o objetivo principal de um balanceador de carga?"), // Azul -> Quadrado 36
+            new Question(37, "enunciado"), // Verde -> Quadrado 37
+            new Question(38, "Banco") // Azul -> Quadrado 38
 
 
-            new Question(1, "O que é hardware em um computador?"),//azul
-            new Question(2, "enunciado"),//verde
-            new Question(3, "O que significa a sigla CPU?"),//azul
-            new Question(4, "enunciado"),//verde
-            new Question(5, "Qual destes é um sistema operacional?"),//azul
-            new Question(6, "enunciado"),//verde
-            new Question(7, "enunciado"),//verde
-            new Question(8, "O que é uma rede de computadores?"),//azul
-            new Question(9, "enunciado"),//verde
-            new Question(10, "Qual é a função do protocolo HTTP?"),//azul
-            new Question(12, " O que significa 'open source'"),//azul
-            new Question(13, "enunciado"),//verde
-            new Question(14, "Qual linguagem é mais usada para desenvolvimento web?"),//azul
-            new Question(15, "enunciado"),//verde
-            new Question(16, "Qual é o principal objetivo de um firewall?"),//azul
-            new Question(17, "O que é virtualização?"),//azul
-            new Question(18, "Qual é a diferença entre IPv4 e IPv6?"),//azul
-            new Question(20, "enunciado"),//verde
-            new Question(21, "enunciado"),//verde
-            new Question(22, "enunciado"),//verde
-            new Question(23, "Qual é a função do DNS em redes?"),//azul
-            new Question(24, "O que é 'Machine Learning'"),//azul
-            new Question(25, "enunciado"),//verde
-            new Question(26, "Qual é a vantagem de um sistema de arquivos NTFS?"),//azul
-            new Question(27, "O que significa SLA em serviços de TI?"),//azul
-            new Question(28, "enunciado"),//verde
-            new Question(29, "Qual o conceito de DevOps?"),//azul
-            new Question(30, "enunciado"),//verde
-            new Question(31, "enunciado"),//verde
-            new Question(32, "O que é um ataque de força bruta?"),//azul
-            new Question(33, "enunciado"),//verde
-            new Question(34, "Qual é a função do protocolo SSH?"),//azul
-            new Question(35, "enunciado"),//verde
-            new Question(36, "O que é 'containerização' em TI?"),//azul
-            new Question(37, "enunciado"),//verde
-            new Question(38, "Qual é o objetivo principal de um balanceador de carga?"),//azul
-            // new Question(num, "enunciado")
+            /*
 
-            
+                    1. O que é hardware em um computador?
+                    a) Softwares que rodam no sistema
+                    b) Componentes físicos de um computador
+                    c) Dados armazenados em nuvem
+                    d) Programas utilizados para edição de texto
+                    Resposta: b
 
-            // 18. Qual é a função do protocolo SSH?
+                    2. O que significa a sigla CPU?
+                    a) Central Processing Unit
+                    b) Computer Programming Unit
+                    c) Central Power Unit
+                    d) Core Programming Utility
+                    Resposta: a
 
-            // a) Transferir arquivos entre servidores
-            // b) Estabelecer conexões remotas seguras
-            // c) Gerenciar pacotes de rede
-            // d) Configurar permissões de usuários
+                    3. Qual destes é um sistema operacional?
+                    a) Python
+                    b) Windows
+                    c) Chrome
+                    d) HTML
+                    Resposta: b
 
-            // Resposta: b
+                    4. O que é uma rede de computadores?
+                    a) Uma conexão entre usuários em um servidor local
+                    b) Um conjunto de computadores interligados que compartilham recursos
+                    c) Apenas uma conexão com a internet
+                    d) Um programa de desenvolvimento de sistemas
+                    Resposta: b
 
-            // 19. O que é "containerização" em TI?
+                    5. Qual é a função do protocolo HTTP?
+                    a) Transferir arquivos via FTP
+                    b) Estabelecer conexões seguras
+                    c) Comunicação entre navegadores e servidores web
+                    d) Enviar e-mails
+                    Resposta: c
 
-            // a) Divisão de servidores em ambientes isolados
-            // b) Virtualização de hardware para performance
-            // c) Uso de ferramentas para compactar aplicativos
-            // d) Compartilhamento de arquivos em redes privadas
+                    6. O que significa "open source"?
+                    a) Software que é gratuito para usar
+                    b) Software cujo código-fonte está disponível para modificação
+                    c) Um programa que exige licença paga
+                    d) Código exclusivo desenvolvido por empresas privadas
+                    Resposta: b
 
-            // Resposta: a
+                    7. Qual linguagem é mais usada para desenvolvimento web?
+                    a) Java
+                    b) C++
+                    c) HTML
+                    d) Swift
+                    Resposta: c
 
-            // 20. Qual é o objetivo principal de um balanceador de carga?
+                    8. Qual é o principal objetivo de um firewall?
+                    a) Proteger contra spam
+                    b) Bloquear sites inseguros
+                    c) Filtrar e controlar o tráfego de rede para segurança
+                    d) Acelerar conexões de internet
+                    Resposta: c
 
-            // a) Diminuir a largura de banda necessária
-            // b) Distribuir o tráfego entre servidores para otimizar desempenho
-            // c) Proteger redes contra acessos não autorizados
-            // d) Monitorar e corrigir falhas automaticamente
+                    9. O que é virtualização?
+                    a) Simulação de hardware em um ambiente digital
+                    b) Criação de um software a partir de código aberto
+                    c) Divisão de redes para maior segurança
+                    d) Compactação de dados para armazenamento
+                    Resposta: a
 
-            // Resposta: b
+                    10. Qual é a diferença entre IPv4 e IPv6?
+                    a) O IPv4 é mais rápido que o IPv6
+                    b) O IPv6 suporta um maior número de endereços IP
+                    c) O IPv4 é usado apenas em redes locais
+                    d) O IPv6 é específico para redes sem fio
+                    Resposta: b
 
+                    11. O que é um banco de dados relacional?
+                    a) Um banco que armazena dados de forma não estruturada
+                    b) Um banco que usa tabelas interconectadas para organizar dados
+                    c) Um banco que gerencia apenas textos e números
+                    d) Um banco que não suporta SQL
+                    Resposta: b
+
+                    12. Qual é a função do DNS em redes?
+                    a) Proteger contra ataques DDoS
+                    b) Traduzir nomes de domínio em endereços IP
+                    c) Aumentar a velocidade da internet
+                    d) Controlar o tráfego de rede interno
+                    Resposta: b
+
+                    13. O que é "Machine Learning"?
+                    a) Desenvolvimento de hardwares inteligentes
+                    b) Um ramo da IA que cria algoritmos capazes de aprender com dados
+                    c) A técnica de programação para dispositivos móveis
+                    d) Uma abordagem para desenvolvimento de software ágil
+                    Resposta: b
+
+                    14. Qual é a vantagem de um sistema de arquivos NTFS?
+                    a) Suporta criptografia nativa
+                    b) É usado apenas em dispositivos móveis
+                    c) É mais rápido que FAT32 para leitura de discos
+                    d) Não suporta permissões de usuários
+                    Resposta: a
+
+                    15. O que significa SLA em serviços de TI?
+                    a) Service Level Agreement
+                    b) System Level Application
+                    c) Secure Login Authentication
+                    d) Software Level Adjustment
+                    Resposta: a
+
+                    16. Qual o conceito de DevOps?
+                    a) Integração de desenvolvimento e operações para entrega contínua
+                    b) Um sistema de monitoramento de redes
+                    c) Uma linguagem de programação específica
+                    d) Um método de controle de acesso
+                    Resposta: a
+
+                    17. O que é um ataque de força bruta?
+                    a) Tentativa de quebrar senhas tentando combinações possíveis
+                    b) Explorar vulnerabilidades em sistemas operacionais
+                    c) Injetar comandos maliciosos em SQL
+                    d) Enviar pacotes corrompidos para derrubar servidores
+                    Resposta: a
+
+                    18. Qual é a função do protocolo SSH?
+                    a) Transferir arquivos entre servidores
+                    b) Estabelecer conexões remotas seguras
+                    c) Gerenciar pacotes de rede
+                    d) Configurar permissões de usuários
+                    Resposta: b
+
+                    19. O que é "containerização" em TI?
+                    a) Divisão de servidores em ambientes isolados
+                    b) Virtualização de hardware para performance
+                    c) Uso de ferramentas para compactar aplicativos
+                    d) Compartilhamento de arquivos em redes privadas
+                    Resposta: a
+
+                    20. Qual é o objetivo principal de um balanceador de carga?
+                    a) Diminuir a largura de banda necessária
+                    b) Distribuir o tráfego entre servidores para otimizar desempenho
+                    c) Proteger redes contra acessos não autorizados
+                    d) Monitorar e corrigir falhas automaticamente
+                    Resposta: b
+            */
         ];
 
         this.alternativas = [
@@ -126,6 +239,7 @@ class Player {
 
             new Alternative(6, 6, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
             new Alternative(7, 7, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
+            
             new Alternative(8, 8, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
 
             // 4. O que é uma rede de computadores?
@@ -292,10 +406,41 @@ class Player {
 
             new Alternative(31, 31, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
             new Alternative(32, 32, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
+
+            // 18. Qual é a função do protocolo SSH?
+
+            // a) Transferir arquivos entre servidores
+            // b) Estabelecer conexões remotas seguras
+            // c) Gerenciar pacotes de rede
+            // d) Configurar permissões de usuários
+
+            // Resposta: b
             new Alternative(33, 33, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
             new Alternative(34, 34, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
+
+            // 19. O que é "containerização" em TI?
+
+            // a) Divisão de servidores em ambientes isolados
+            // b) Virtualização de hardware para performance
+            // c) Uso de ferramentas para compactar aplicativos
+            // d) Compartilhamento de arquivos em redes privadas
+
+            // Resposta: a
+
+
             new Alternative(35, 35, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
             new Alternative(36, 36, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
+
+            // 20. Qual é o objetivo principal de um balanceador de carga?
+
+            // a) Diminuir a largura de banda necessária
+            // b) Distribuir o tráfego entre servidores para otimizar desempenho
+            // c) Proteger redes contra acessos não autorizados
+            // d) Monitorar e corrigir falhas automaticamente
+
+            // Resposta: b
+
+
             new Alternative(37, 37, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
             new Alternative(38, 38, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
 
@@ -306,44 +451,44 @@ class Player {
 
         // Mapeamento de questões por casa
         this.questoesPorCasa = [
-            { casa: 1, pergunta: this.questoes[1], alternativas: this.alternativas.slice(1, 2) },  // Alternativa 1
-            { casa: 2, pergunta: this.questoes[2], alternativas: this.alternativas.slice(2, 3) },  // Alternativa 2
-            { casa: 3, pergunta: this.questoes[3], alternativas: this.alternativas.slice(3, 4) },  // Alternativa 2
-            { casa: 4, pergunta: this.questoes[4], alternativas: this.alternativas.slice(4, 5) },   // Alternativa 2
-            { casa: 5, pergunta: this.questoes[5], alternativas: this.alternativas.slice(5, 6) },   // Alternativa 2
-            { casa: 6, pergunta: this.questoes[6], alternativas: this.alternativas.slice(6, 7) },   // Alternativa 2
-            { casa: 7, pergunta: this.questoes[7], alternativas: this.alternativas.slice(7, 8) },   // Alternativa 2
-            { casa: 8, pergunta: this.questoes[8], alternativas: this.alternativas.slice(8, 9) },   // Alternativa 2
-            { casa: 9, pergunta: this.questoes[9], alternativas: this.alternativas.slice(9, 10) },   // Alternativa 2
-            { casa: 10, pergunta: this.questoes[10], alternativas: this.alternativas.slice(10, 11) },   // Alternativa 2
-            { casa: 11, pergunta: this.questoes[11], alternativas: this.alternativas.slice(11, 12) },   // Alternativa 2
-            { casa: 12, pergunta: this.questoes[12], alternativas: this.alternativas.slice(12, 13) },   // Alternativa 2
-            { casa: 13, pergunta: this.questoes[13], alternativas: this.alternativas.slice(13, 14) },   // Alternativa 2
-            { casa: 14, pergunta: this.questoes[14], alternativas: this.alternativas.slice(14, 15) },   // Alternativa 2
-            { casa: 15, pergunta: this.questoes[15], alternativas: this.alternativas.slice(15, 16) },   // Alternativa 2
-            { casa: 16, pergunta: this.questoes[16], alternativas: this.alternativas.slice(16, 17) },   // Alternativa 2
-            { casa: 17, pergunta: this.questoes[17], alternativas: this.alternativas.slice(17, 18) },   // Alternativa 2
-            { casa: 18, pergunta: this.questoes[18], alternativas: this.alternativas.slice(18, 19) },   // Alternativa 2
-            { casa: 19, pergunta: this.questoes[19], alternativas: this.alternativas.slice(19, 20) },   // Alternativa 2
-            { casa: 20, pergunta: this.questoes[20], alternativas: this.alternativas.slice(20, 21) },   // Alternativa 2
-            { casa: 21, pergunta: this.questoes[21], alternativas: this.alternativas.slice(21, 22) },   // Alternativa 2
-            { casa: 22, pergunta: this.questoes[22], alternativas: this.alternativas.slice(22, 23) },   // Alternativa 2
-            { casa: 23, pergunta: this.questoes[23], alternativas: this.alternativas.slice(23, 24) },   // Alternativa 2
-            { casa: 24, pergunta: this.questoes[24], alternativas: this.alternativas.slice(24, 25) },   // Alternativa 2
-            { casa: 25, pergunta: this.questoes[25], alternativas: this.alternativas.slice(25, 26) },   // Alternativa 2
-            { casa: 26, pergunta: this.questoes[26], alternativas: this.alternativas.slice(26, 27) },   // Alternativa 2
-            { casa: 27, pergunta: this.questoes[27], alternativas: this.alternativas.slice(27, 28) },   // Alternativa 2
-            { casa: 28, pergunta: this.questoes[28], alternativas: this.alternativas.slice(28, 29) },   // Alternativa 2
-            { casa: 29, pergunta: this.questoes[29], alternativas: this.alternativas.slice(29, 30) },   // Alternativa 2
-            { casa: 30, pergunta: this.questoes[30], alternativas: this.alternativas.slice(30, 31) },   // Alternativa 2
-            { casa: 31, pergunta: this.questoes[31], alternativas: this.alternativas.slice(31, 32) },   // Alternativa 2
-            { casa: 32, pergunta: this.questoes[32], alternativas: this.alternativas.slice(32, 33) },   // Alternativa 2
-            { casa: 33, pergunta: this.questoes[33], alternativas: this.alternativas.slice(33, 34) },   // Alternativa 2
-            { casa: 34, pergunta: this.questoes[34], alternativas: this.alternativas.slice(34, 35) },   // Alternativa 2
-            { casa: 35, pergunta: this.questoes[35], alternativas: this.alternativas.slice(35, 36) },   // Alternativa 2
-            { casa: 36, pergunta: this.questoes[36], alternativas: this.alternativas.slice(36, 37) },   // Alternativa 2
-            { casa: 37, pergunta: this.questoes[37], alternativas: this.alternativas.slice(37, 38) },   // Alternativa 2
-            { casa: 38, pergunta: this.questoes[38], alternativas: this.alternativas.slice(38, 39) }   // Alternativa 2
+            { casa: 1, pergunta: this.questoes[0], alternativas: this.alternativas.slice(0, 1) },  // Alternativa 1
+            { casa: 2, pergunta: this.questoes[1], alternativas: this.alternativas.slice(1, 2) },  // Alternativa 2
+            { casa: 3, pergunta: this.questoes[2], alternativas: this.alternativas.slice(2, 3) },  // Alternativa 3
+            { casa: 4, pergunta: this.questoes[3], alternativas: this.alternativas.slice(3, 4) },   // Alternativa 4
+            { casa: 5, pergunta: this.questoes[4], alternativas: this.alternativas.slice(4, 5) },   // Alternativa 5
+            { casa: 6, pergunta: this.questoes[5], alternativas: this.alternativas.slice(5, 6) },   // Alternativa 6
+            { casa: 7, pergunta: this.questoes[6], alternativas: this.alternativas.slice(6, 7) },   // Alternativa 7
+            { casa: 8, pergunta: this.questoes[7], alternativas: this.alternativas.slice(7, 8) },   // Alternativa 8
+            { casa: 9, pergunta: this.questoes[8], alternativas: this.alternativas.slice(8,9) },   // Alternativa 9
+            { casa: 10, pergunta: this.questoes[9], alternativas: this.alternativas.slice(9, 10) },   // Alternativa 10
+            { casa: 11, pergunta: this.questoes[10], alternativas: this.alternativas.slice(10, 11) },   // Alternativa 11
+            { casa: 12, pergunta: this.questoes[11], alternativas: this.alternativas.slice(11, 12) },   // Alternativa 12
+            { casa: 13, pergunta: this.questoes[12], alternativas: this.alternativas.slice(12, 13) },   // Alternativa 13
+            { casa: 14, pergunta: this.questoes[13], alternativas: this.alternativas.slice(13, 14) },   // Alternativa 14
+            { casa: 15, pergunta: this.questoes[14], alternativas: this.alternativas.slice(14, 15) },   // Alternativa 15
+            { casa: 16, pergunta: this.questoes[15], alternativas: this.alternativas.slice(15, 16) },   // Alternativa 16
+            { casa: 17, pergunta: this.questoes[16], alternativas: this.alternativas.slice(16, 17) },   // Alternativa 17
+            { casa: 18, pergunta: this.questoes[17], alternativas: this.alternativas.slice(17, 18) },   // Alternativa 18
+            { casa: 19, pergunta: this.questoes[18], alternativas: this.alternativas.slice(18, 19) },   // Alternativa 19
+            { casa: 20, pergunta: this.questoes[19], alternativas: this.alternativas.slice(19, 20) },   // Alternativa 20
+            { casa: 21, pergunta: this.questoes[20], alternativas: this.alternativas.slice(20, 21) },   // Alternativa 21
+            { casa: 22, pergunta: this.questoes[21], alternativas: this.alternativas.slice(21, 22) },   // Alternativa 22
+            { casa: 23, pergunta: this.questoes[22], alternativas: this.alternativas.slice(22, 23) },   // Alternativa 23
+            { casa: 24, pergunta: this.questoes[23], alternativas: this.alternativas.slice(23, 24) },   // Alternativa 24
+            { casa: 25, pergunta: this.questoes[24], alternativas: this.alternativas.slice(24, 25) },   // Alternativa 25
+            { casa: 26, pergunta: this.questoes[25], alternativas: this.alternativas.slice(25, 26) },   // Alternativa 26
+            { casa: 27, pergunta: this.questoes[26], alternativas: this.alternativas.slice(26, 27) },   // Alternativa 27
+            { casa: 28, pergunta: this.questoes[27], alternativas: this.alternativas.slice(27, 28) },   // Alternativa 28
+            { casa: 29, pergunta: this.questoes[28], alternativas: this.alternativas.slice(28, 29) },   // Alternativa 29
+            { casa: 30, pergunta: this.questoes[29], alternativas: this.alternativas.slice(29, 30) },   // Alternativa 30
+            { casa: 31, pergunta: this.questoes[30], alternativas: this.alternativas.slice(30, 31) },   // Alternativa 31
+            { casa: 32, pergunta: this.questoes[31], alternativas: this.alternativas.slice(31, 32) },   // Alternativa 32
+            { casa: 33, pergunta: this.questoes[32], alternativas: this.alternativas.slice(32, 33) },   // Alternativa 33
+            { casa: 34, pergunta: this.questoes[33], alternativas: this.alternativas.slice(33, 34) },   // Alternativa 34
+            { casa: 35, pergunta: this.questoes[34], alternativas: this.alternativas.slice(34, 35) },   // Alternativa 35
+            { casa: 36, pergunta: this.questoes[35], alternativas: this.alternativas.slice(35, 36) },   // Alternativa 36
+            { casa: 37, pergunta: this.questoes[36], alternativas: this.alternativas.slice(36, 37) },   // Alternativa 37
+            { casa: 38, pergunta: this.questoes[37], alternativas: this.alternativas.slice(37, 38) }   // Alternativa 38
 
             //{ casa: 'posicao', pergunta: this.questoes[posicao], alternativas: this.alternativas.slice(prim_valor, seg_valor) }
         ];
