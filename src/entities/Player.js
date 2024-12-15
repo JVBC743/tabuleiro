@@ -20,432 +20,260 @@ class Player {
 
         // Questões e alternativas mapeadas
         this.questoes = [
-            new Question(1, "O que é hardware em um computador?"), // Azul -> Quadrado 1
-            new Question(2, "enunciado"), // Verde -> Quadrado 2
+            new Question(1, "O que é hardware em um computador?"), // Azul -> Quadrado 1 
+            new Question(2, "Qual das alternativas a seguir é um exemplo de mutualismo?"), // Verde -> Quadrado 2
             new Question(3, "O que significa a sigla CPU?"), // Azul -> Quadrado 3
-            new Question(4, "enunciado"), // Verde -> Quadrado 4
+            new Question(4, "O parasitismo é uma relação em que:"), // Verde -> Quadrado 4
             new Question(5, "Qual destes é um sistema operacional?"), // Azul -> Quadrado 5
-            new Question(6, "enunciado"), // Verde -> Quadrado 6
-            new Question(7, "enunciado"), // Verde -> Quadrado 7
+            new Question(6, "Na relação ecológica chamada comensalismo, uma das espécies:"), // Verde -> Quadrado 6
+            new Question(7, "Qual das relações abaixo é um exemplo de competição?"), // Verde -> Quadrado 7
             new Question(8, "O que é uma rede de computadores?"), // Azul -> Quadrado 8
-            new Question(9, "enunciado"), // Verde -> Quadrado 9
+            new Question(9, "Uma relação onde uma espécie utiliza outra como abrigo, sem prejudicá-la, é chamada de:"), // Verde -> Quadrado 9
             new Question(10, "Qual é a função do protocolo HTTP?"), // Azul -> Quadrado 10
             new Question(11, "O que significa 'open source'"), // Azul -> Quadrado 11
-            new Question(12, "enunciado"), // Verde -> Quadrado 12
+            new Question(12, "Qual o principal responsável pela captura de energia do Sol em um ecossistema?"), // Verde -> Quadrado 12
             new Question(13, "Qual linguagem é mais usada para desenvolvimento web?"), // Azul -> Quadrado 13 
-            new Question(14, "enunciado"), // Verde -> Quadrado 14
+            new Question(14, "O fluxo de energia nos ecossistemas:"), // Verde -> Quadrado 14
             new Question(15, "Qual é o principal objetivo de um firewall?"), // Azul -> Quadrado 15
             new Question(16, "O que é virtualização?"), // Azul -> Quadrado 16
             new Question(17, "Qual é a diferença entre IPv4 e IPv6?"), // Azul -> Quadrado 17
-            new Question(18, "enunciado"), // Verte -> Quadrado 18
-            new Question(19, "enunciado"), // Verde -> Quadrado 19
-            new Question(20, "enunciado"), // Verde -> Quadrado 20
+            new Question(18, "A energia disponível para os consumidores primários em uma cadeia alimentar vem:"), // Verde -> Quadrado 18
+            new Question(19, "Em uma pirâmide ecológica de energia, qual nível trófico possui a maior quantidade de energia disponível?"), // Verde -> Quadrado 19
+            new Question(20, "Por que apenas cerca de 10% da energia é transferida entre os níveis tróficos em uma cadeia alimentar?"), // Verde -> Quadrado 20
             new Question(21, "O que é a camada de aplicação no modelo OSI?"), // Azul -> Quadrado 21
             new Question(22, "O que é 'Machine Learning'"), // Azul -> Quadrado 22
-            new Question(23, "enunciado"), // Verde -> Quadrado 23
+            new Question(23, "Qual o principal reservatório de carbono no ciclo do carbono?"), // Verde -> Quadrado 23
             new Question(24, "Qual é a vantagem de um sistema de arquivos NTFS?"), // Azul -> Quadrado 24
             new Question(25, "O que significa SLA em serviços de TI?"), // Azul -> Quadrado 25
-            new Question(26, "enunciado"), // Verde -> Quadrado 26
+            new Question(26, "O ciclo do nitrogênio depende de qual tipo de organismos para fixar o nitrogênio atmosférico?"), // Verde -> Quadrado 26
             new Question(27, "Qual o conceito de DevOps?"), // Azul -> Quadrado 27
-            new Question(28, "enunciado"), // Verde -> Quadrado 28
-            new Question(29, "enunciado"), // Verde -> Quadrado 29
+            new Question(28, "No ciclo da água, a transpiração está relacionada com:"), // Verde -> Quadrado 28
+            new Question(29, "Qual o papel dos decompositores nos ciclos biogeoquímicos?"), // Verde -> Quadrado 29
             new Question(30, "O que é um ataque de força bruta?"), // Azul -> Quadrado 30
-            new Question(31, "enunciado"), // Verde -> Quadrado 31
+            new Question(31, "No ciclo do fósforo, o principal reservatório de fósforo é:"), // Verde -> Quadrado 31
             new Question(32, "Qual é a função do protocolo SSH?"), // Azul -> Quadrado 32
-            new Question(33, "enunciado"), // Verde -> Quadrado 33
+            new Question(33, "O aumento de gás carbônico na atmosfera tem impacto direto sobre:"), // Verde -> Quadrado 33
             new Question(34, "O que é 'containerização' em TI?"), // Azul -> Quadrado 34
-            new Question(35, "enunciado"), // Verde -> Quadrado 35
+            new Question(35, " Qual processo do ciclo do nitrogênio transforma amônia em nitrato?"), // Verde -> Quadrado 35
             new Question(36, "Qual é o objetivo principal de um balanceador de carga?"), // Azul -> Quadrado 36
-            new Question(37, "enunciado"), // Verde -> Quadrado 37
-            new Question(38, "Banco") // Azul -> Quadrado 38
+            new Question(37, "Nos ciclos biogeoquímicos, o termo 'assimilação' refere-se a:"), // Verde -> Quadrado 37
+            new Question(38, "O que é um banco de dados relacional?") // Azul -> Quadrado 38
 
 
             /*
 
-                    1. O que é hardware em um computador?
-                    a) Softwares que rodam no sistema
-                    b) Componentes físicos de um computador
-                    c) Dados armazenados em nuvem
-                    d) Programas utilizados para edição de texto
+                    Relações ecológicas entre seres vivos
+
+                    1. Qual das alternativas a seguir é um exemplo de mutualismo?
+                    a) Leão e zebra
+                    b) Abelha e flor
+                    c) Tubarão e rêmora
+                    d) Lobo e coelho
+
                     Resposta: b
 
-                    2. O que significa a sigla CPU?
-                    a) Central Processing Unit
-                    b) Computer Programming Unit
-                    c) Central Power Unit
-                    d) Core Programming Utility
-                    Resposta: a
+                    2. O parasitismo é uma relação em que:
 
-                    3. Qual destes é um sistema operacional?
-                    a) Python
-                    b) Windows
-                    c) Chrome
-                    d) HTML
+                    a) Ambos os organismos se beneficiam
+                    b) Um organismo se beneficia e o outro é prejudicado
+                    c) Nenhum organismo é afetado
+                    d) Ambos são prejudicados
+
                     Resposta: b
 
-                    4. O que é uma rede de computadores?
-                    a) Uma conexão entre usuários em um servidor local
-                    b) Um conjunto de computadores interligados que compartilham recursos
-                    c) Apenas uma conexão com a internet
-                    d) Um programa de desenvolvimento de sistemas
-                    Resposta: b
+                    3. Na relação ecológica chamada comensalismo, uma das espécies:
 
-                    5. Qual é a função do protocolo HTTP?
-                    a) Transferir arquivos via FTP
-                    b) Estabelecer conexões seguras
-                    c) Comunicação entre navegadores e servidores web
-                    d) Enviar e-mails
+                    a) É prejudicada
+                    b) Não é afetada
+                    c) Se beneficia sem prejudicar a outra
+                    d) Se beneficia prejudicando a outra
+
                     Resposta: c
 
-                    6. O que significa "open source"?
-                    a) Software que é gratuito para usar
-                    b) Software cujo código-fonte está disponível para modificação
-                    c) Um programa que exige licença paga
-                    d) Código exclusivo desenvolvido por empresas privadas
-                    Resposta: b
+                    4. Qual das relações abaixo é um exemplo de competição?
 
-                    7. Qual linguagem é mais usada para desenvolvimento web?
-                    a) Java
-                    b) C++
-                    c) HTML
-                    d) Swift
+                    a) Dois leões disputando território
+                    b) Pássaros construindo ninhos em árvores
+                    c) Fungos crescendo em árvores
+                    d) Cupins degradando madeira
+
+                    Resposta: a
+
+                    5. Uma relação onde uma espécie utiliza outra como abrigo, sem prejudicá-la, é chamada de:
+
+                    a) Mutualismo
+                    b) Amensalismo
+                    c) Comensalismo
+                    d) Predação
+
                     Resposta: c
 
-                    8. Qual é o principal objetivo de um firewall?
-                    a) Proteger contra spam
-                    b) Bloquear sites inseguros
-                    c) Filtrar e controlar o tráfego de rede para segurança
-                    d) Acelerar conexões de internet
+                    Ciclo de nutrientes e fluxo de energia
+
+                    6. Qual o principal responsável pela captura de energia do Sol em um ecossistema?
+
+                    a) Consumidores primários
+                    b) Herbívoros
+                    c) Produtores
+                    d) Decompositores
+
                     Resposta: c
 
-                    9. O que é virtualização?
-                    a) Simulação de hardware em um ambiente digital
-                    b) Criação de um software a partir de código aberto
-                    c) Divisão de redes para maior segurança
-                    d) Compactação de dados para armazenamento
-                    Resposta: a
+                    7. O fluxo de energia nos ecossistemas:
 
-                    10. Qual é a diferença entre IPv4 e IPv6?
-                    a) O IPv4 é mais rápido que o IPv6
-                    b) O IPv6 suporta um maior número de endereços IP
-                    c) O IPv4 é usado apenas em redes locais
-                    d) O IPv6 é específico para redes sem fio
+                    a) É cíclico
+                    b) É unidirecional
+                    c) Não depende dos produtores
+                    d) É reciclado continuamente pelos decompositores
+
                     Resposta: b
 
-                    11. O que é um banco de dados relacional?
-                    a) Um banco que armazena dados de forma não estruturada
-                    b) Um banco que usa tabelas interconectadas para organizar dados
-                    c) Um banco que gerencia apenas textos e números
-                    d) Um banco que não suporta SQL
+                    8. A energia disponível para os consumidores primários em uma cadeia alimentar vem:
+
+                    a) Diretamente do Sol
+                    b) Da respiração dos decompositores
+                    c) Da biomassa dos produtores
+                    d) Dos consumidores secundários
+
+                    Resposta: c
+
+                    9. Em uma pirâmide ecológica de energia, qual nível trófico possui a maior quantidade de energia disponível?
+
+                    a) Consumidores terciários
+                    b) Produtores
+                    c) Consumidores primários
+                    d) Decompositores
+
                     Resposta: b
 
-                    12. Qual é a função do DNS em redes?
-                    a) Proteger contra ataques DDoS
-                    b) Traduzir nomes de domínio em endereços IP
-                    c) Aumentar a velocidade da internet
-                    d) Controlar o tráfego de rede interno
+                    10. Por que apenas cerca de 10% da energia é transferida entre os níveis tróficos em uma cadeia alimentar?
+
+                    a) Porque a maior parte da energia é armazenada no ambiente
+                    b) Porque a maior parte da energia é perdida como calor durante processos metabólicos
+                    c) Porque os decompositores consomem a maior parte da energia
+                    d) Porque os produtores produzem pouca energia
+
                     Resposta: b
 
-                    13. O que é "Machine Learning"?
-                    a) Desenvolvimento de hardwares inteligentes
-                    b) Um ramo da IA que cria algoritmos capazes de aprender com dados
-                    c) A técnica de programação para dispositivos móveis
-                    d) Uma abordagem para desenvolvimento de software ágil
+                    Ciclos biogeoquímicos
+
+                    11. Qual o principal reservatório de carbono no ciclo do carbono?
+
+                    a) Atmosfera
+                    b) Oceanos
+                    c) Organismos vivos
+                    d) Solo
+
                     Resposta: b
 
-                    14. Qual é a vantagem de um sistema de arquivos NTFS?
-                    a) Suporta criptografia nativa
-                    b) É usado apenas em dispositivos móveis
-                    c) É mais rápido que FAT32 para leitura de discos
-                    d) Não suporta permissões de usuários
-                    Resposta: a
+                    12. O ciclo do nitrogênio depende de qual tipo de organismos para fixar o nitrogênio atmosférico?
 
-                    15. O que significa SLA em serviços de TI?
-                    a) Service Level Agreement
-                    b) System Level Application
-                    c) Secure Login Authentication
-                    d) Software Level Adjustment
-                    Resposta: a
+                    a) Fungos
+                    b) Bactérias
+                    c) Protozoários
+                    d) Algas
 
-                    16. Qual o conceito de DevOps?
-                    a) Integração de desenvolvimento e operações para entrega contínua
-                    b) Um sistema de monitoramento de redes
-                    c) Uma linguagem de programação específica
-                    d) Um método de controle de acesso
-                    Resposta: a
-
-                    17. O que é um ataque de força bruta?
-                    a) Tentativa de quebrar senhas tentando combinações possíveis
-                    b) Explorar vulnerabilidades em sistemas operacionais
-                    c) Injetar comandos maliciosos em SQL
-                    d) Enviar pacotes corrompidos para derrubar servidores
-                    Resposta: a
-
-                    18. Qual é a função do protocolo SSH?
-                    a) Transferir arquivos entre servidores
-                    b) Estabelecer conexões remotas seguras
-                    c) Gerenciar pacotes de rede
-                    d) Configurar permissões de usuários
                     Resposta: b
 
-                    19. O que é "containerização" em TI?
-                    a) Divisão de servidores em ambientes isolados
-                    b) Virtualização de hardware para performance
-                    c) Uso de ferramentas para compactar aplicativos
-                    d) Compartilhamento de arquivos em redes privadas
+                    13. No ciclo da água, a transpiração está relacionada com:
+
+                    a) A perda de água pela atmosfera
+                    b) O movimento de água no subsolo
+                    c) A liberação de vapor d'água pelas plantas
+                    d) A formação de rios e lagos
+
+                    Resposta: c
+
+                    14. Qual o papel dos decompositores nos ciclos biogeoquímicos?
+
+                    a) Transformar matéria orgânica em matéria inorgânica
+                    b) Fixar carbono da atmosfera
+                    c) Absorver nutrientes diretamente das plantas
+                    d) Alocar energia para consumidores secundários
+
                     Resposta: a
 
-                    20. Qual é o objetivo principal de um balanceador de carga?
-                    a) Diminuir a largura de banda necessária
-                    b) Distribuir o tráfego entre servidores para otimizar desempenho
-                    c) Proteger redes contra acessos não autorizados
-                    d) Monitorar e corrigir falhas automaticamente
+                    15. No ciclo do fósforo, o principal reservatório de fósforo é:
+
+                    a) Atmosfera
+                    b) Organismos vivos
+                    c) Rochas sedimentares
+                    d) Oceanos
+
+                    Resposta: c
+
+                    16. O aumento de gás carbônico na atmosfera tem impacto direto sobre:
+
+                    a) O ciclo do nitrogênio
+                    b) O aquecimento global
+                    c) A formação de fósforo
+                    d) O ciclo do fósforo
+
                     Resposta: b
+
+                    17. Qual processo do ciclo do nitrogênio transforma amônia em nitrato?
+
+                    a) Fixação
+                    b) Nitrificação
+                    c) Desnitrificação
+                    d) Amonificação
+
+                    Resposta: b
+
+                    18. Nos ciclos biogeoquímicos, o termo "assimilação" refere-se a:
+
+                    a) A conversão de nutrientes inorgânicos em compostos orgânicos pelos organismos vivos
+                    b) A decomposição da matéria orgânica em nutrientes inorgânicos
+                    c) A perda de nutrientes do solo para o ambiente aquático
+                    d) A formação de novos compostos minerais
+
+                    Resposta: a
             */
         ];
 
         this.alternativas = [
-            new Alternative(1, 1, ["a) Softwares que rodam no sistema", "b) Componentes físicos de um computador", "c) Dados armazenados em nuvem", "d) Programas utilizados para edição de texto"], "RESP"),//azul
-
-            // 1. O que é hardware em um computador?
-
-            // a) Softwares que rodam no sistema
-            // b) Componentes físicos de um computador
-            // c) Dados armazenados em nuvem
-            // d) Programas utilizados para edição de texto
-
-            // Resposta: b
-            new Alternative(2, 2, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-
-            new Alternative(3, 3, ["a) Central Processing Unit", "b) Computer Programming Unit", "c) Central Power Unit", "d) Core Programming Utility"], "RESP"),//azul
-
-            // 2. O que significa a sigla CPU?
-
-            // a) Central Processing Unit
-            // b) Computer Programming Unit
-            // c) Central Power Unit
-            // d) Core Programming Utility
-
-
-            new Alternative(4, 4, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(5, 5, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
-
-            // 3. Qual destes é um sistema operacional?
-
-            // a) Python
-            // b) Windows
-            // c) Chrome
-            // d) HTML
-
-            new Alternative(6, 6, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(7, 7, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            
-            new Alternative(8, 8, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
-
-            // 4. O que é uma rede de computadores?
-
-            // a) Uma conexão entre usuários em um servidor local
-            // b) Um conjunto de computadores interligados que compartilham recursos
-            // c) Apenas uma conexão com a internet
-            // d) Um programa de desenvolvimento de sistemas
-
-            // Resposta: b
-
-            new Alternative(9, 9, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(10, 10, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
-
-            // 6. O que significa "open source"?
-
-            // a) Software que é gratuito para usar
-            // b) Software cujo código-fonte está disponível para modificação
-            // c) Um programa que exige licença paga
-            // d) Código exclusivo desenvolvido por empresas privadas
-
-            // Resposta: b
-
-
-            new Alternative(11, 11, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
-
-
-            // 7. Qual linguagem é mais usada para desenvolvimento web?
-
-            // a) Java
-            // b) C++
-            // c) HTML
-            // d) Swift
-
-            // Resposta: c
-
-            new Alternative(12, 12, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(13, 13, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
-
-
-            // 8. Qual é o principal objetivo de um firewall?
-
-            // a) Proteger contra spam
-            // b) Bloquear sites inseguros
-            // c) Filtrar e controlar o tráfego de rede para segurança
-            // d) Acelerar conexões de internet
-
-            // Resposta: c
-
-
-            new Alternative(14, 14, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(15, 15, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
-
-            // 9. O que é virtualização?
-
-            // a) Simulação de hardware em um ambiente digital
-            // b) Criação de um software a partir de código aberto
-            // c) Divisão de redes para maior segurança
-            // d) Compactação de dados para armazenamento
-
-            // Resposta: a
-
-            new Alternative(16, 16, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
-
-            // 10. Qual é a diferença entre IPv4 e IPv6?
-
-            // a) O IPv4 é mais rápido que o IPv6
-            // b) O IPv6 suporta um maior número de endereços IP
-            // c) O IPv4 é usado apenas em redes locais
-            // d) O IPv6 é específico para redes sem fio
-
-            // Resposta: b
-
-
-            new Alternative(17, 17, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
-
-
-            // 11. O que é um banco de dados relacional?
-
-            // a) Um banco que armazena dados de forma não estruturada
-            // b) Um banco que usa tabelas interconectadas para organizar dados
-            // c) Um banco que gerencia apenas textos e números
-            // d) Um banco que não suporta SQL
-
-            // Resposta: b
-
-
-            new Alternative(18, 18, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(19, 19, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(20, 20, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(21, 21, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
-
-
-            // 12. Qual é a função do DNS em redes?
-
-            // a) Proteger contra ataques DDoS
-            // b) Traduzir nomes de domínio em endereços IP
-            // c) Aumentar a velocidade da internet
-            // d) Controlar o tráfego de rede interno
-
-            // Resposta: b
-
-            
-            new Alternative(22, 22, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
-
-            // 13. O que é "Machine Learning"?
-
-            // a) Desenvolvimento de hardwares inteligentes
-            // b) Um ramo da IA que cria algoritmos capazes de aprender com dados
-            // c) A técnica de programação para dispositivos móveis
-            // d) Uma abordagem para desenvolvimento de software ágil
-
-            // Resposta: b
-
-            new Alternative(23, 23, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(24, 24, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
-
-            // 14. Qual é a vantagem de um sistema de arquivos NTFS?
-
-            // a) Suporta criptografia nativa
-            // b) É usado apenas em dispositivos móveis
-            // c) É mais rápido que FAT32 para leitura de discos
-            // d) Não suporta permissões de usuários
-
-            // Resposta: a
-
-
-            new Alternative(25, 25, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
-
-            // 15. O que significa SLA em serviços de TI?
-
-            // a) Service Level Agreement
-            // b) System Level Application
-            // c) Secure Login Authentication
-            // d) Software Level Adjustment
-
-            // Resposta: a
-
+            new Alternative(1, 1, ["a) Softwares que rodam no sistema", "b) Componentes físicos de um computador", "c) Dados armazenados em nuvem", "d) Programas utilizados para edição de texto"], "b) Componentes físicos de um computador"),//azul
+            new Alternative(2, 2, ["a) Leão e zebra", "b) Abelha e flor", "c) Tubarão e rêmora", "d) Lobo e coelho"], "b) Abelha e flor"),
+            new Alternative(3, 3, ["a) Central Processing Unit", "b) Computer Programming Unit", "c) Central Power Unit", "d) Core Programming Utility"], "a) Central Processing Unit"),//azul
+            new Alternative(4, 4, ["a) Ambos os organismos se beneficiam", "b) Um organismo se beneficia e o outro é prejudicado", "c) Nenhum organismo é afetado", "d) Ambos são prejudicados"], "b) Um organismo se beneficia e o outro é prejudicado"),
+            new Alternative(5, 5, ["a) Python", "b) Windows", "c) Chrome", "d) HTML"], "b) Windows"),//azul
+            new Alternative(6, 6, ["a) É prejudicada", "b) Não é afetada", "c) Se beneficia sem prejudicar a outra", "d) Se beneficia prejudicando a outra"], "c) Se beneficia sem prejudicar a outra"),
+            new Alternative(7, 7, ["a) Dois leões disputando território", "b) Pássaros construindo ninhos em árvores", "c) Fungos crescendo em árvores", "d) Cupins degradando madeira"], "a) Dois leões disputando território"),
+            new Alternative(8, 8, ["a) Uma conexão entre usuários em um servidor local", "b) Um conjunto de computadores interligados que compartilham recursos", "c) Apenas uma conexão com a internet", "d) Um programa de desenvolvimento de sistemas"], "b) Um conjunto de computadores interligados que compartilham recursos"),//azul
+            new Alternative(9, 9, ["a) Mutualismo", "b) Amensalismo", "c) Comensalismo", "d) Predação"], "c) Comensalismo"),
+            new Alternative(10, 10, ["a) Transferir arquivos via FTP", "b) Estabelecer conexões seguras", "c) Comunicação entre navegadores e servidores web", "d) Enviar e-mails"], "c) Comunicação entre navegadores e servidores web"),//azul
+            new Alternative(11, 11, ["a) Software que é gratuito para usar", "b) Software cujo código-fonte está disponível para modificação", "c) Um programa que exige licença paga", "d) Código exclusivo desenvolvido por empresas privadas"], "b) Software cujo código-fonte está disponível para modificação"),//azul
+            new Alternative(12, 12, ["a) Consumidores primários", "b) Herbívoros", "c) Produtores", "d) Decompositores"], "c) Produtores"),
+            new Alternative(13, 13, ["a) Java", "b) C++", "c) HTML", "d) Swift"], "c) HTML"),//azul
+            new Alternative(14, 14, ["a) É cíclico", "b) É unidirecional", "c) Não depende dos produtores", "d) É reciclado continuamente pelos decompositores"], "b) É unidirecional"),
+            new Alternative(15, 15, ["a) Proteger contra spam", "b) Bloquear sites inseguros", "c) Filtrar e controlar o tráfego de rede para segurança", "d) Acelerar conexões de internet"], "c) Filtrar e controlar o tráfego de rede para segurança"),//azul
+            new Alternative(16, 16, ["a) Simulação de hardware em um ambiente digital", "b) Criação de um software a partir de código aberto", "c) Divisão de redes para maior segurança", "d) Compactação de dados para armazenamento"], "a) Simulação de hardware em um ambiente digital"),//azul
+            new Alternative(17, 17, ["a) O IPv4 é mais rápido que o IPv6", "b) O IPv6 suporta um maior número de endereços IP", "c) O IPv4 é usado apenas em redes locais", "d) O IPv6 é específico para redes sem fio"], "b) O IPv6 suporta um maior número de endereços IP"),//azul
+            new Alternative(18, 18, ["a) Diretamente do Sol", "b) Da respiração dos decompositores", "c) Da biomassa dos produtores", "d) Dos consumidores secundários"], "c) Da biomassa dos produtores"),            
+            new Alternative(19, 19, ["a) Consumidores terciários", "b) Produtores", "c) Consumidores primários", "d) Decompositores"], "b) Produtores"),
+            new Alternative(20, 20, ["a) Porque a maior parte da energia é armazenada no ambiente", "b) Porque a maior parte da energia é perdida como calor durante processos metabólicos", "c) Porque os decompositores consomem a maior parte da energia", "d) Porque os produtores produzem pouca energia"], "b) Porque a maior parte da energia é perdida como calor durante processos metabólicos"),
+            new Alternative(21, 21, ["a) Proteger contra ataques DDoS", "b) Aumentar a velocidade da internet", "c) Controlar o tráfego de rede interno", "d) Traduzir nomes de domínio em endereços IP"], "d) Traduzir nomes de domínio em endereços IP"),//azul
+            new Alternative(22, 22, ["a) Desenvolvimento de hardwares inteligentes", "b) A técnica de programação para dispositivos móveis", "c) Um ramo da IA que cria algoritmos capazes de aprender com dados", "d) Uma abordagem para desenvolvimento de software ágil"], "c) Um ramo da IA que cria algoritmos capazes de aprender com dados"),//azul
+            new Alternative(23, 23, ["a) Atmosfera", "b) Oceanos", "c) Organismos vivos", "d) Solo"], "b) Oceanos"),            
+            new Alternative(24, 24, ["a) Suporta criptografia nativa", "b) É usado apenas em dispositivos móveis", "c) É mais rápido que FAT32 para leitura de discos", "d) Não suporta permissões de usuários"], "a) Suporta criptografia nativa"),//azul
+            new Alternative(25, 25, ["a) System Level Application", "b) Secure Login Authentication", "c) Software Level Adjustment", "d) Service Level Agreement"], "d) Service Level Agreement"),//azul
             new Alternative(26, 26, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(27, 27, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
-
-            // 16. Qual o conceito de DevOps?
-
-            // a) Integração de desenvolvimento e operações para entrega contínua
-            // b) Um sistema de monitoramento de redes
-            // c) Uma linguagem de programação específica
-            // d) Um método de controle de acesso
-
-            // Resposta: a
-
-            new Alternative(28, 28, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(29, 29, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(30, 30, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
-
-            // 17. O que é um ataque de força bruta?
-
-            // a) Tentativa de quebrar senhas tentando combinações possíveis
-            // b) Explorar vulnerabilidades em sistemas operacionais
-            // c) Injetar comandos maliciosos em SQL
-            // d) Enviar pacotes corrompidos para derrubar servidores
-
-            // Resposta: a
-
-
-            new Alternative(31, 31, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(32, 32, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
-
-            // 18. Qual é a função do protocolo SSH?
-
-            // a) Transferir arquivos entre servidores
-            // b) Estabelecer conexões remotas seguras
-            // c) Gerenciar pacotes de rede
-            // d) Configurar permissões de usuários
-
-            // Resposta: b
-            new Alternative(33, 33, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(34, 34, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
-
-            // 19. O que é "containerização" em TI?
-
-            // a) Divisão de servidores em ambientes isolados
-            // b) Virtualização de hardware para performance
-            // c) Uso de ferramentas para compactar aplicativos
-            // d) Compartilhamento de arquivos em redes privadas
-
-            // Resposta: a
-
-
-            new Alternative(35, 35, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(36, 36, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
-
-            // 20. Qual é o objetivo principal de um balanceador de carga?
-
-            // a) Diminuir a largura de banda necessária
-            // b) Distribuir o tráfego entre servidores para otimizar desempenho
-            // c) Proteger redes contra acessos não autorizados
-            // d) Monitorar e corrigir falhas automaticamente
-
-            // Resposta: b
-
-
-            new Alternative(37, 37, ["A_1", "A_2", "A_3", "A_4"], "RESP"),
-            new Alternative(38, 38, ["A_1", "A_2", "A_3", "A_4"], "RESP"),//azul
-
-
+            new Alternative(27, 27, ["a) Integração de desenvolvimento e operações para entrega contínua", "b) Um sistema de monitoramento de redes", "c) Uma linguagem de programação específica", "d) Um método de controle de acesso"], "a) Integração de desenvolvimento e operações para entrega contínua"),//azul
+            new Alternative(28, 28, ["a) A perda de água pela atmosfera", "b) O movimento de água no subsolo", "c) A liberação de vapor d'água pelas plantas", "d) A formação de rios e lagos"], "c) A liberação de vapor d'água pelas plantas"),
+            new Alternative(29, 29, ["a) Transformar matéria orgânica em matéria inorgânica", "b) Fixar carbono da atmosfera", "c) Absorver nutrientes diretamente das plantas", "d) Alocar energia para consumidores secundários"], "a) Transformar matéria orgânica em matéria inorgânica"),
+            new Alternative(30, 30, ["a) Explorar vulnerabilidades em sistemas operacionais", "b) Injetar comandos maliciosos em SQL", "c) Tentativa de quebrar senhas tentando combinações possíveis", "d) Enviar pacotes corrompidos para derrubar servidores"], "c) Tentativa de quebrar senhas tentando combinações possíveis"),//azul
+            new Alternative(31, 31, ["a) Atmosfera", "b) Organismos vivos", "c) Rochas sedimentares", "d) Oceanos"], "c) Rochas sedimentares"),
+            new Alternative(32, 32, ["a) Transferir arquivos entre servidores", "b) Estabelecer conexões remotas seguras", "c) Gerenciar pacotes de rede", "d) Configurar permissões de usuários"], "b) Estabelecer conexões remotas seguras"),//azul
+            new Alternative(33, 33, ["a) O ciclo do nitrogênio", "b) O aquecimento global", "c) A formação de fósforo", "d) O ciclo do fósforo"], "b) O aquecimento global"),
+            new Alternative(34, 34, ["a) Divisão de servidores em ambientes isolados", "b) Virtualização de hardware para performance", "c) Uso de ferramentas para compactar aplicativos", "d) Compartilhamento de arquivos em redes privadas"], "a) Divisão de servidores em ambientes isolados"),//azul
+            new Alternative(35, 35, ["a) Fixação", "b) Nitrificação", "c) Desnitrificação", "d) Amonificação"], "b) Nitrificação"),    
+            new Alternative(36, 36, ["a) Diminuir a largura de banda necessária", "b) Monitorar e corrigir falhas automaticamente", "c) Proteger redes contra acessos não autorizados", "d) Distribuir o tráfego entre servidores para otimizar desempenho"], "d) Distribuir o tráfego entre servidores para otimizar desempenho"),//azul
+            new Alternative(37, 37, ["a) A conversão de nutrientes inorgânicos em compostos orgânicos pelos organismos vivos", "b) A decomposição da matéria orgânica em nutrientes inorgânicos", "c) A perda de nutrientes do solo para o ambiente aquático", "d) A formação de novos compostos minerais"], "a) A conversão de nutrientes inorgânicos em compostos orgânicos pelos organismos vivos"),
+        
+            new Alternative(38, 38, ["a) Um banco que armazena dados de forma não estruturada", "b) Um banco que usa tabelas interconectadas para organizar dados", "c) Um banco que gerencia apenas textos e números", "d) Um banco que não suporta SQL"], "b) Um banco que usa tabelas interconectadas para organizar dados"),//azul
             //new Alternative(id_alt, id_perg, ["A_1", "A_2", "A_3", "A_4"], "RESP")
+
+            
         ];
 
 
