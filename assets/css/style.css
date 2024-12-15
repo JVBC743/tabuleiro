@@ -22,8 +22,8 @@ header, main, footer {
 
 
 footer {
-    font-size: large;
-    color: chocolate;
+    font-size: 150%;
+    color: rgb(255, 255, 255);
     -webkit-text-stroke: 1px #d09a6d;
 
 }

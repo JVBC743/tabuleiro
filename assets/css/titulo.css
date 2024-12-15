@@ -70,6 +70,8 @@
     background: linear-gradient(to bottom, rgba(94, 62, 14, 0), #814c22);
     animation: 2s animateLeft linear -1s infinite;
   }
+
+ 
   
   @keyframes animateTop {
     0% {
